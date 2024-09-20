@@ -11,4 +11,7 @@ public/
 .deploy_git*/
 .idea
 themes/butterfly/.git
+twikoo.min.js
+twikoo.all.min.js
+
 
