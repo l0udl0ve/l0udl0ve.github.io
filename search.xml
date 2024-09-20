@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>categories</title>
+    <title>环境配置</title>
     <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
 <h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
@@ -11,6 +11,12 @@
 <li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Rust</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
+      </tags>
   </entry>
   <entry>
     <title>汇编1</title>
@@ -170,9 +176,17 @@
 <p>r 通用寄存器<br>m 代表内存<br>imm 代表立即数<br>r8 代表8位通用寄存器<br>m8 代表8位内存<br>imm8 代表8位立即数</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>免杀</category>
+        <category>汇编</category>
+      </categories>
+      <tags>
+        <tag>二进制</tag>
+        <tag>汇编</tag>
+      </tags>
   </entry>
   <entry>
-    <title>categories</title>
+    <title>汇编2</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%962/</url>
     <content><![CDATA[<h1 id="内存寻址"><a href="#内存寻址" class="headerlink" title="内存寻址"></a>内存寻址</h1><p>寄存器位于CPU内部，执行速度快，内存速度相对较慢，但是空间很大。寄存器和内存没有本质区别，都是用于存储数据的容器，都是定宽的</p>
 <p>常用的寄存器我们之前提到过有：eax、ecx、edx、ebx、esp、ebp、esi、edi计算机中的几个常用计量单位：BYTE WORD DWORD QWORD<br>#数据宽度是严格限制的，不然无法编译。</p>
@@ -351,9 +365,17 @@
 <p><a href="./sorce/%E5%A0%86%E6%A0%88.xlsx">堆栈.xlsx</a></p>
 <p><a href="./sorce/%E5%A0%86%E6%A0%88%E5%9B%BE.xlsx">堆栈图.xlsx</a></p>
 ]]></content>
+      <categories>
+        <category>免杀</category>
+        <category>汇编</category>
+      </categories>
+      <tags>
+        <tag>二进制</tag>
+        <tag>汇编</tag>
+      </tags>
   </entry>
   <entry>
-    <title>categories</title>
+    <title>汇编3</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%963/</url>
     <content><![CDATA[<h1 id="空函数"><a href="#空函数" class="headerlink" title="空函数"></a>空函数</h1><h2 id="C代码"><a href="#C代码" class="headerlink" title="C代码"></a>C代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">function1</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="反汇编"><a href="#反汇编" class="headerlink" title="反汇编"></a>反汇编</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">00EC2430  push ebp</span><br><span class="line">00EC2431  mov ebp,esp</span><br><span class="line">00EC2433  sub esp,0C0h</span><br><span class="line">00EC2439  push ebx</span><br><span class="line">00EC243A  push esi</span><br><span class="line">00EC243B  push||edi</span><br><span class="line">00EC243C  mov edi,ebp</span><br><span class="line">00EC243E  xor ecx,ecx</span><br><span class="line">00EC2440  mov eax,0CCCCCCCCh</span><br><span class="line">00EC2445  rep stos dword ptr es:[edi]</span><br><span class="line">00EC2447  mov ecx,offset _4FA790EB_helloworld@cpp (0ECE066h)</span><br><span class="line">00EC244C  call @__CheckForDebuggerJustMyCode@4 (0EC1384h)</span><br></pre></td></tr></table></figure>
@@ -417,9 +439,17 @@
 <li>初始化必须赋初值</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>免杀</category>
+        <category>汇编</category>
+      </categories>
+      <tags>
+        <tag>二进制</tag>
+        <tag>汇编</tag>
+      </tags>
   </entry>
   <entry>
-    <title>categories</title>
+    <title>汇编4</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%964/</url>
     <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>它可以存储一个固定大小的相同类型元素的顺序集合。数组是用来存储一系列数据，但它往往被认为是一系列相同类型的变量</p>
 <h2 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">5</span>] = &#123;<span class="number">5</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br></pre></td></tr></table></figure>
@@ -495,5 +525,13 @@
 
 <p>示例代码</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">&quot;C&quot;</span> __declspec(dllexport) <span class="type">void</span> <span class="title function_">rundll</span><span class="params">(HWND hwnd,</span></span><br><span class="line"><span class="params">											 HINSTANCE hinst,</span></span><br><span class="line"><span class="params">											 LPTSTRlpCmdLine,</span></span><br><span class="line"><span class="params">											 INT nCmdShow)</span></span><br><span class="line">&#123;</span><br><span class="line">	MessageBox(<span class="literal">NULL</span>,TEXT(<span class="string">&quot;Test&quot;</span>),TEXT(<span class="string">&quot;Rundll32&quot;</span>),MB_OK);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>免杀</category>
+        <category>汇编</category>
+      </categories>
+      <tags>
+        <tag>二进制</tag>
+        <tag>汇编</tag>
+      </tags>
   </entry>
 </search>
