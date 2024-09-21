@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>环境配置</title>
+    <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
+<h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
+<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>这里选用电脑上有的vscode。需要安装两个插件：</p>
+<ul>
+<li>CodeLLDB</li>
+<li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>汇编1</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%961/</url>
     <content><![CDATA[<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
@@ -509,24 +527,6 @@
       <tags>
         <tag>二进制</tag>
         <tag>汇编</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>环境配置</title>
-    <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
-<h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
-<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>这里选用电脑上有的vscode。需要安装两个插件：</p>
-<ul>
-<li>CodeLLDB</li>
-<li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-      <tags>
-        <tag>语言学习</tag>
       </tags>
   </entry>
 </search>
