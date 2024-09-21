@@ -211,7 +211,7 @@
 
 <h3 id="第五种：使用通用寄存器-通用寄存器-1-2-4-8-立即数"><a href="#第五种：使用通用寄存器-通用寄存器-1-2-4-8-立即数" class="headerlink" title="第五种：使用通用寄存器+通用寄存器*1&#x2F;2&#x2F;4&#x2F;8+立即数"></a>第五种：使用通用寄存器+通用寄存器*1&#x2F;2&#x2F;4&#x2F;8+立即数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV EAX,13FFC4</span><br><span class="line">MOV ECX,2</span><br><span class="line">MOV EDX,DWORD PTR DS:[EAX+ECX*4+4]</span><br><span class="line"></span><br><span class="line">MOV EAX,13FFC4</span><br><span class="line">MOV ECX,2</span><br><span class="line">MOV DWORD PTR DS:[EAX+ECX*4+4],87654321</span><br><span class="line"></span><br><span class="line">LEA EAX,DWORD PTR DS:[EAX+ECX*4+2]</span><br></pre></td></tr></table></figure>
 
-<p>![[内存寻址.xlsx]]</p>
+<p><img src="/%E5%86%85%E5%AD%98%E5%AF%BB%E5%9D%80.xlsx" alt="内存寻址"></p>
 <h2 id="标志寄存器"><a href="#标志寄存器" class="headerlink" title="标志寄存器"></a>标志寄存器</h2><p>x86架构CPU中，标志寄存器主要有3种作用：</p>
 <ul>
 <li><p>存储相关指令执行后的结果，例如CF、PF、AF、ZF、OF标志位</p>
@@ -225,7 +225,7 @@
 <p>16位模式下，标志寄存器名称为FLAG ，寄存器大小16位。<br>32位模式下，标志寄存器的名称为EFLAG ，寄存器大小32位。<br>64位模式下，标志寄存器的名称为RFLAG ，寄存器大小64位。</p>
 </blockquote>
 <p>EFLAG寄存器各个位有不同的用途，灰色的部分为保留位</p>
-<p>![[x86_EFLAG.jpg]]<br>![[eflags.xlsx]]</p>
+<p><img src="/x86-EFLAG.jpg"><br><img src="/eflags.xlsx" alt="eflags"></p>
 <h2 id="jcc语句"><a href="#jcc语句" class="headerlink" title="jcc语句"></a>jcc语句</h2><h3 id="jmp"><a href="#jmp" class="headerlink" title="jmp"></a>jmp</h3><p>jmp 跳转到指定地址：e9</p>
 <p>不涉及堆栈变化 （不修改ebp&amp;esp）本质：修改EIP</p>
 <p>jmp 0x19FFD0     &#x3D;&gt;     mov eip,0x19FFD0</p>
@@ -361,8 +361,8 @@
 <li><p>程序代码区，存放函数体的二进制代码。</p>
 </li>
 </ol>
-<p>![[堆栈.xlsx]]</p>
-<p>![[堆栈图.xlsx]]</p>
+<p><img src="/%E5%A0%86%E6%A0%88.xlsx" alt="堆栈"></p>
+<p><img src="/%E5%A0%86%E6%A0%88%E5%9B%BE.xlsx" alt="堆栈图"></p>
 ]]></content>
       <categories>
         <category>免杀</category>
@@ -411,13 +411,13 @@
 </blockquote>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c = <span class="number">127</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> u = <span class="number">127</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/source/a.png"></p>
-<p>![[Pasted image 20240826001850.png]]</p>
+<p><img src="/1.png"></p>
+<p><img src="/2.png"></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c = <span class="number">128</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> u = <span class="number">128</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>![[Pasted image 20240826001922.png]]<br>![[Pasted image 20240826001927.png]]</p>
+<p><img src="/3.png"><br><img src="/4.png"></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c = <span class="number">-129</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> u = <span class="number">-129</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>![[Pasted image 20240826001949.png]]<br>![[Pasted image 20240826001955.png]]</p>
+<p><img src="/5.png"><br><img src="/6.png"></p>
 <p>整数类型又分为有符号数跟无符号数，但是在内存里面是一模一样的</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> a = <span class="number">0xAA</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">char</span> b = <span class="number">0xbb</span>;</span><br></pre></td></tr></table></figure>
 <p>但是运算的时候会有jcc语句的比较</p>
