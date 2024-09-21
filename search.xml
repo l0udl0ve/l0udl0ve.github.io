@@ -225,8 +225,7 @@
 <p>16位模式下，标志寄存器名称为FLAG ，寄存器大小16位。<br>32位模式下，标志寄存器的名称为EFLAG ，寄存器大小32位。<br>64位模式下，标志寄存器的名称为RFLAG ，寄存器大小64位。</p>
 </blockquote>
 <p>EFLAG寄存器各个位有不同的用途，灰色的部分为保留位</p>
-<p>![[x86的EFLAG.jpg]]</p>
-<p><a href="./sorce/eflags.xlsx">eflags.xlsx</a></p>
+<p><img src="https://s2.loli.net/2024/09/21/CvoSDJFVBrTyde5.jpg" alt="x86_EFLAG.jpg"><br><a href="./sorce/eflags.xlsx">eflags.xlsx</a></p>
 <h2 id="jcc语句"><a href="#jcc语句" class="headerlink" title="jcc语句"></a>jcc语句</h2><h3 id="jmp"><a href="#jmp" class="headerlink" title="jmp"></a>jmp</h3><p>jmp 跳转到指定地址：e9</p>
 <p>不涉及堆栈变化 （不修改ebp&amp;esp）本质：修改EIP</p>
 <p>jmp 0x19FFD0     &#x3D;&gt;     mov eip,0x19FFD0</p>
@@ -411,7 +410,8 @@
 <p>有符号：0111 1111 &#x3D; 2^6+2^5+2^4+2^3+2^2+2^1+2^0 &#x3D; 127 &#x3D;&#x3D;&gt; 范围是 -128 ~ 127<br>无符号：1111 1111 &#x3D; 2^7+2^6+2^5+2^4+2^3+2^2+2^1+2^0 &#x3D; 255 &#x3D;&#x3D;&gt; 范围是 0 ~ 255</p>
 </blockquote>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c = <span class="number">127</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> u = <span class="number">127</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>![[Pasted image 20240826001837.png]]</p>
+
+<p><img src="/source/a.png"></p>
 <p>![[Pasted image 20240826001850.png]]</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c = <span class="number">128</span>;</span><br><span class="line">	<span class="type">unsigned</span> <span class="type">char</span> u = <span class="number">128</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -533,10 +533,5 @@
         <tag>二进制</tag>
         <tag>汇编</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>汇编5</title>
-    <url>/2024/09/21/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%965/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
