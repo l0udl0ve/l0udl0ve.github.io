@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>环境配置</title>
-    <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
-<h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
-<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>这里选用电脑上有的vscode。需要安装两个插件：</p>
-<ul>
-<li>CodeLLDB</li>
-<li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Rust</category>
-      </categories>
-      <tags>
-        <tag>语言学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>汇编1</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%961/</url>
     <content><![CDATA[<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
@@ -178,7 +160,6 @@
 ]]></content>
       <categories>
         <category>免杀</category>
-        <category>汇编</category>
       </categories>
       <tags>
         <tag>二进制</tag>
@@ -211,7 +192,7 @@
 
 <h3 id="第五种：使用通用寄存器-通用寄存器-1-2-4-8-立即数"><a href="#第五种：使用通用寄存器-通用寄存器-1-2-4-8-立即数" class="headerlink" title="第五种：使用通用寄存器+通用寄存器*1&#x2F;2&#x2F;4&#x2F;8+立即数"></a>第五种：使用通用寄存器+通用寄存器*1&#x2F;2&#x2F;4&#x2F;8+立即数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MOV EAX,13FFC4</span><br><span class="line">MOV ECX,2</span><br><span class="line">MOV EDX,DWORD PTR DS:[EAX+ECX*4+4]</span><br><span class="line"></span><br><span class="line">MOV EAX,13FFC4</span><br><span class="line">MOV ECX,2</span><br><span class="line">MOV DWORD PTR DS:[EAX+ECX*4+4],87654321</span><br><span class="line"></span><br><span class="line">LEA EAX,DWORD PTR DS:[EAX+ECX*4+2]</span><br></pre></td></tr></table></figure>
 
-<p><img src="/%E5%86%85%E5%AD%98%E5%AF%BB%E5%9D%80.xlsx" alt="内存寻址"></p>
+<p><img src="/%E5%86%85%E5%AD%98%E5%AF%BB%E5%9D%80.xlsx"></p>
 <h2 id="标志寄存器"><a href="#标志寄存器" class="headerlink" title="标志寄存器"></a>标志寄存器</h2><p>x86架构CPU中，标志寄存器主要有3种作用：</p>
 <ul>
 <li><p>存储相关指令执行后的结果，例如CF、PF、AF、ZF、OF标志位</p>
@@ -524,11 +505,28 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">&quot;C&quot;</span> __declspec(dllexport) <span class="type">void</span> <span class="title function_">rundll</span><span class="params">(HWND hwnd,</span></span><br><span class="line"><span class="params">											 HINSTANCE hinst,</span></span><br><span class="line"><span class="params">											 LPTSTRlpCmdLine,</span></span><br><span class="line"><span class="params">											 INT nCmdShow)</span></span><br><span class="line">&#123;</span><br><span class="line">	MessageBox(<span class="literal">NULL</span>,TEXT(<span class="string">&quot;Test&quot;</span>),TEXT(<span class="string">&quot;Rundll32&quot;</span>),MB_OK);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>免杀</category>
-        <category>汇编</category>
       </categories>
       <tags>
         <tag>二进制</tag>
         <tag>汇编</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>环境配置</title>
+    <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
+<h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
+<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>这里选用电脑上有的vscode。需要安装两个插件：</p>
+<ul>
+<li>CodeLLDB</li>
+<li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
       </tags>
   </entry>
 </search>
