@@ -1,1 +1,1 @@
-{"cover":{"randomAmount":20,"baseUrl":null,"filenameTemplate":"{no}.webp"},"createTime":"2024/09/20 00:00:00","siteLeaveEvent":true,"leaveTitle":"{{{(>_<)}}}~","returnTitle":"(*´∇｀*)欢迎！~","copyrightNotice":"著作权归作者所有，非商业转载请注明出处。","expire_day":30,"topNavScrollToggle":true,"site_root":"/"}
+{"cover":{"randomAmount":20,"baseUrl":null,"filenameTemplate":"thumb_{no}.webp"},"createTime":"2024/09/20 00:00:00","siteLeaveEvent":true,"leaveTitle":"{{{(>_<)}}}~","returnTitle":"(*´∇｀*)欢迎！~","copyrightNotice":"著作权归作者所有，非商业转载请注明出处。","expire_day":30,"topNavScrollToggle":true,"site_root":"/"}
