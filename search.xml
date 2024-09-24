@@ -1,251 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>1、环境配置</title>
-    <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/1%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
-<h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
-<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>这里选用电脑上有的vscode。需要安装两个插件：</p>
-<ul>
-<li>CodeLLDB</li>
-<li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-      <tags>
-        <tag>语言学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2、数据类型</title>
-    <url>/2024/09/21/rust%E5%AD%A6%E4%B9%A0/2%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h1 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h1><h2 id="let关键字"><a href="#let关键字" class="headerlink" title="let关键字"></a>let关键字</h2><p>rust是<strong>强类型</strong>语言，使用<font color="#ff0000">let</font>关键字声明变量，会自推导类型，也可以指定类型。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">a</span>: i38 = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="可变变量、不可变变量、常量"><a href="#可变变量、不可变变量、常量" class="headerlink" title="可变变量、不可变变量、常量"></a>可变变量、不可变变量、常量</h2><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">a</span> = <span class="number">123</span>;    <span class="comment">//可变变量</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">b</span> = <span class="number">123</span>;        <span class="comment">//不可变变量</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">let</span> <span class="variable">c</span> =<span class="number">123</span>;   <span class="comment">//常量</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>可变变量允许直接重新赋值。</li>
-</ul>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">a</span> = <span class="number">123</span>;</span><br><span class="line">a = <span class="number">456</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>不可变变量，只能重影（shadowing），类似一种重新绑定。</li>
-</ul>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">x</span> = x + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>常量不可变。</li>
-</ul>
-<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>严格来说不属于数据类型。rust的注释和C的相同。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 我是单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*我</span></span><br><span class="line"><span class="comment">  是</span></span><br><span class="line"><span class="comment">  多</span></span><br><span class="line"><span class="comment">  行</span></span><br><span class="line"><span class="comment">  注</span></span><br><span class="line"><span class="comment">  释*/</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h2><table>
-<thead>
-<tr>
-<th align="center">位长度</th>
-<th align="center">有符号</th>
-<th align="center">无符号</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">8-bit</td>
-<td align="center">i8</td>
-<td align="center">u8</td>
-</tr>
-<tr>
-<td align="center">16-bit</td>
-<td align="center">i16</td>
-<td align="center">u16</td>
-</tr>
-<tr>
-<td align="center">32-bit</td>
-<td align="center">i32</td>
-<td align="center">u32</td>
-</tr>
-<tr>
-<td align="center">64-bit</td>
-<td align="center">i64</td>
-<td align="center">u64</td>
-</tr>
-<tr>
-<td align="center">128-bit</td>
-<td align="center">i128</td>
-<td align="center">u128</td>
-</tr>
-<tr>
-<td align="center">架构</td>
-<td align="center">isize</td>
-<td align="center">usize</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">进制</th>
-<th align="center">例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">十进制</td>
-<td align="center">12_345 或 12345</td>
-</tr>
-<tr>
-<td align="center">十六进制</td>
-<td align="center">0xff</td>
-</tr>
-<tr>
-<td align="center">八进制</td>
-<td align="center">0o77</td>
-</tr>
-<tr>
-<td align="center">二进制</td>
-<td align="center">0b1111_0000（推荐）</td>
-</tr>
-<tr>
-<td align="center">字节(只能表示 u8 型)</td>
-<td align="center">b’A’</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>下划线的设计能方便程员计数，当然添加下划线也是可以的。</p>
-</blockquote>
-<h2 id="浮点"><a href="#浮点" class="headerlink" title="浮点"></a>浮点</h2><p>有两种类型：</p>
-<ul>
-<li>f32：32位浮点</li>
-<li>f64：64位浮点</li>
-</ul>
-<h2 id="布尔"><a href="#布尔" class="headerlink" title="布尔"></a>布尔</h2><p>使用<font color="#ff0000">bool</font>关键字进行声明，有两个取值。</p>
-<ul>
-<li>ture</li>
-<li>false</li>
-</ul>
-<blockquote>
-<p>在判断中，rust严格使用布尔类型，不同于其他语言的<strong>非零即真</strong>。</p>
-</blockquote>
-<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>使用<font color="#ff0000">char</font>关键字进行声明，rust的字符型占<strong>4字节</strong>，是Unicode，使用单引号。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="string">&quot;s&quot;</span>; <span class="comment">//字符串</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">c</span> = <span class="string">&#x27;c&#x27;</span>; <span class="comment">//字符</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = <span class="number">65</span> <span class="keyword">as</span> <span class="type">char</span>; <span class="comment">//由整型创建</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul>
-<li><strong>..y</strong><br> 等价于 0..y。</li>
-<li><strong>x..</strong><br> 等价于位置 x 到数据结束。</li>
-<li><strong>..</strong><br> 等价于位置 0 到结束(for循环不允许这种遍历)。</li>
-</ul>
-<p>快速将 String 转换成 &amp;str：</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>); <span class="comment">//String类型</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">s2</span> = &amp;s1[..]; <span class="comment">//&amp;str类型</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>使用符合数据类型不可避免地会使用迭代器，下面是迭代器的基础用法。<br><del>过几天再写</del></p>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组不同于元组，数组要求使用相同的数据类型。</p>
-<h3 id="普通数组"><a href="#普通数组" class="headerlink" title="普通数组"></a>普通数组</h3><h4 id="申明"><a href="#申明" class="headerlink" title="申明"></a>申明</h4><p>数组用一对 [ ] 包括的同类型数据。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">//声明</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">b</span>: [<span class="type">i32</span>; <span class="number">5</span>] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">c</span> = [<span class="number">3</span>; <span class="number">5</span>];  <span class="comment">//let c = [3, 3, 3, 3, 3];  </span></span><br></pre></td></tr></table></figure>
-<h4 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h4><p>数组通过下标访问，如果需要修改数组的元素，需要添加mut关键字。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> <span class="variable">first</span> = a[<span class="number">0</span>];    </span><br><span class="line">a[<span class="number">0</span>] = <span class="number">123</span>; <span class="comment">// 错误：数组 a 不可变  </span></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];  </span><br><span class="line">a[<span class="number">0</span>] = <span class="number">4</span>; <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
-<h3 id="可变数组"><a href="#可变数组" class="headerlink" title="可变数组"></a>可变数组</h3><p>准确的说应该叫做向量，类似于C++中的vector，类型为Vec&lt;T&gt;。</p>
-<h4 id="申明-1"><a href="#申明-1" class="headerlink" title="申明"></a>申明</h4><p>可以使用以下的两种方式创建一个可变数组。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">vector</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="type">Vec</span>::<span class="title function_ invoke__">new</span>(); <span class="comment">// 创建类型为 i32 的空向量</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">vector</span> = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>];     <span class="comment">// 通过数组创建向量</span></span><br></pre></td></tr></table></figure>
-<h4 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h4><p>使用<strong>append</strong>方法实现两个<strong>同类型</strong>的可变数组的拼接。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">v1</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>];  </span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">v2</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="built_in">vec!</span>[<span class="number">16</span>, <span class="number">32</span>, <span class="number">64</span>];  </span><br><span class="line">v1.<span class="title function_ invoke__">append</span>(&amp;<span class="keyword">mut</span> v2);  </span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意写成可变的引用类型</p>
-</blockquote>
-<h4 id="访问-1"><a href="#访问-1" class="headerlink" title="访问"></a>访问</h4><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="字符串引用-str"><a href="#字符串引用-str" class="headerlink" title="字符串引用 &amp;str"></a>字符串引用 &amp;str</h3><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span>:&amp;<span class="type">str</span> = <span class="string">&quot;hello world&quot;</span>;</span><br></pre></td></tr></table></figure>
-<p>需要注意的是，字符串引用类型是无法修改的。</p>
-<h3 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串 String"></a>字符串 String</h3><p><del>过几天再写</del></p>
-<h2 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h2><p><del>过几天再写</del></p>
-<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>和python类似，rust元组支持不同数据类型，比较合适作为参数传递。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">tuple</span> = (<span class="number">1</span>, <span class="number">2.0</span>, <span class="string">&quot;a&quot;</span>); <span class="comment">//定义</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, tuple.<span class="number">0</span>); <span class="comment">//打印下标为0的元素</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> (x, y, z) = (<span class="number">1</span>, <span class="number">2.0</span>, <span class="string">&quot;a&quot;</span>); <span class="comment">//参数的接收方式</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, y);</span><br></pre></td></tr></table></figure>
-
-<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><h2 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h2><p>rust的枚举类型比较复杂，可以在枚举类型中定义数据类型。使用<font color="#ff0000">enum</font>定义一个枚举。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Book1</span> &#123;  </span><br><span class="line">    Papery,</span><br><span class="line">    Electronic  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Book2</span> &#123;</span><br><span class="line">    <span class="title function_ invoke__">Papery</span>(<span class="type">u32</span>),</span><br><span class="line">    <span class="title function_ invoke__">Electronic</span>(<span class="type">String</span>),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Option枚举类"><a href="#Option枚举类" class="headerlink" title="Option枚举类"></a>Option枚举类</h2>]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-      <tags>
-        <tag>语言学习</tag>
-        <tag>rust</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4、函数</title>
-    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/4%E3%80%81%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-      <tags>
-        <tag>语言学习</tag>
-        <tag>rust</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3、基本控制流</title>
-    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/3%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h1><p><font color="#ff0000">rust中的判断严格限制为布尔类型</font>，不同于其他语言的非0即真。</p>
-<h2 id="if-else-if-else语句"><a href="#if-else-if-else语句" class="headerlink" title="if - else if - else语句"></a>if - else if - else语句</h2><p>这样经典的判断rust同样支持，但是不同于C语言，<font color="#ff0000">rust的每个if-else块必须使用{ }</font>，不允许独立的语句；不同于go语言，<font color="#ff0000">rust允许{在单独的行上</font>。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> a==<span class="number">1</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//case 1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> a &gt; <span class="number">1</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//case 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//case 3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="三目运算"><a href="#三目运算" class="headerlink" title="三目运算"></a>三目运算</h2><p>可以使用一个参数来接收作用域中的返回值</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;condition&gt; &#123; block <span class="number">1</span> &#125; <span class="keyword">else</span> &#123; block <span class="number">2</span> &#125; </span><br></pre></td></tr></table></figure>
-
-<h2 id="match"><a href="#match" class="headerlink" title="match"></a>match</h2><p>在rust中<strong>match</strong>关键字用于实现一个类似于C++中的<strong>switch</strong>的的选择分支结构，常常和枚举类型进行联用。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">match</span> 枚举类实例 &#123;</span><br><span class="line">    分类<span class="number">1</span> =&gt; &#123;</span><br><span class="line">	    函数体</span><br><span class="line">    &#125;,</span><br><span class="line">    分类<span class="number">2</span> =&gt; &#123;</span><br><span class="line">	    函数体</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">    _ =&gt; &#123;</span><br><span class="line">	    default的函数体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>既然是函数体，可以是允许有返回值的。可以在<strong>match</strong>添加参数来接收这个返回值。另外，其他情况使用下划线_表示。</p>
-<h2 id="if-let语句"><a href="#if-let语句" class="headerlink" title="if let语句"></a>if let语句</h2><p><strong>if let</strong>是只区分两种情况的match语句的”语法糖”，用于处理比较复杂的语句，对于枚举类依然适用。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> 匹配值 = 源变量 &#123;</span><br><span class="line">    语句块</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//例外</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><p>均可以使用<font color="#ff0000">break</font>关键字跳出。</p>
-<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">i</span> = <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span> &#123;  </span><br><span class="line">    <span class="comment">// 循环体 </span></span><br><span class="line">    i += <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="loop循环"><a href="#loop循环" class="headerlink" title="loop循环"></a>loop循环</h2><p>用于构建无限循环。</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">loop</span> &#123;  </span><br><span class="line">        <span class="comment">// 循环体 </span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>rust的for关键字作用类似python或是C++ algorithm中的for_each，用于遍历迭代器对象。<br>可以用于遍历切片：</p>
-<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="number">0</span>..<span class="number">10</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>Tips:可以加上小括号将切片视为一个迭代器对象，对步长和正序、倒序进行控制</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-      <tags>
-        <tag>语言学习</tag>
-        <tag>rust</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/6%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81%E7%89%B9%E6%80%A7%E4%B8%8E%E6%B3%9B%E5%9E%8B/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/5%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8EIO/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/7%E3%80%81%E5%AE%8F%E5%92%8C%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>rust学习</category>
-      </categories>
-  </entry>
-  <entry>
     <title>汇编1</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/1%E3%80%81%E6%B1%87%E7%BC%961/</url>
     <content><![CDATA[<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
@@ -672,6 +427,24 @@
       </tags>
   </entry>
   <entry>
+    <title>1、环境配置</title>
+    <url>/2024/09/20/rust%E5%AD%A6%E4%B9%A0/1%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="编译器"><a href="#编译器" class="headerlink" title="编译器"></a>编译器</h1><h2 id="1、Windows"><a href="#1、Windows" class="headerlink" title="1、Windows"></a>1、Windows</h2><p>首先下载<a href="https://static.rust-lang.org/rustup/dist/i686-pc-windows-gnu/rustup-init.exe">官方编译器</a>，根据自己电脑编译器（<strong>MSVC</strong> or <strong>MinGW</strong>）进行配置安装。参考<a href="https://www.runoob.com/rust/rust-setup.html">菜鸟教程</a>。</p>
+<h2 id="2、Linux"><a href="#2、Linux" class="headerlink" title="2、Linux"></a>2、<del>Linux</del></h2><p>没尝试，后期开发会把这块补上</p>
+<h1 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h1><p>这里选用电脑上有的vscode。需要安装两个插件：</p>
+<ul>
+<li>CodeLLDB</li>
+<li>rust-analyzer<br>使用cargo创建项目即可调试和运行代码。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>4、汇编4</title>
     <url>/2024/09/20/%E5%85%8D%E6%9D%80/4%E3%80%81%E6%B1%87%E7%BC%964/</url>
     <content><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>它可以存储一个固定大小的相同类型元素的顺序集合。数组是用来存储一系列数据，但它往往被认为是一系列相同类型的变量</p>
@@ -755,5 +528,232 @@
         <tag>二进制</tag>
         <tag>汇编</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>2、数据类型</title>
+    <url>/2024/09/21/rust%E5%AD%A6%E4%B9%A0/2%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h1><h2 id="let关键字"><a href="#let关键字" class="headerlink" title="let关键字"></a>let关键字</h2><p>rust是<strong>强类型</strong>语言，使用<font color="#ff0000">let</font>关键字声明变量，会自推导类型，也可以指定类型。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">let</span> <span class="variable">a</span>: i38 = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="可变变量、不可变变量、常量"><a href="#可变变量、不可变变量、常量" class="headerlink" title="可变变量、不可变变量、常量"></a>可变变量、不可变变量、常量</h2><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">a</span> = <span class="number">123</span>;    <span class="comment">//可变变量</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">b</span> = <span class="number">123</span>;        <span class="comment">//不可变变量</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">let</span> <span class="variable">c</span> =<span class="number">123</span>;   <span class="comment">//常量</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可变变量允许直接重新赋值。</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">a</span> = <span class="number">123</span>;</span><br><span class="line">a = <span class="number">456</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不可变变量，只能重影（shadowing），类似一种重新绑定。</li>
+</ul>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">x</span> = <span class="number">5</span>;  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">x</span> = x + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>常量不可变。</li>
+</ul>
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>严格来说不属于数据类型。rust的注释和C的相同。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 我是单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*我</span></span><br><span class="line"><span class="comment">  是</span></span><br><span class="line"><span class="comment">  多</span></span><br><span class="line"><span class="comment">  行</span></span><br><span class="line"><span class="comment">  注</span></span><br><span class="line"><span class="comment">  释*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h2><table>
+<thead>
+<tr>
+<th align="center">位长度</th>
+<th align="center">有符号</th>
+<th align="center">无符号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">8-bit</td>
+<td align="center">i8</td>
+<td align="center">u8</td>
+</tr>
+<tr>
+<td align="center">16-bit</td>
+<td align="center">i16</td>
+<td align="center">u16</td>
+</tr>
+<tr>
+<td align="center">32-bit</td>
+<td align="center">i32</td>
+<td align="center">u32</td>
+</tr>
+<tr>
+<td align="center">64-bit</td>
+<td align="center">i64</td>
+<td align="center">u64</td>
+</tr>
+<tr>
+<td align="center">128-bit</td>
+<td align="center">i128</td>
+<td align="center">u128</td>
+</tr>
+<tr>
+<td align="center">架构</td>
+<td align="center">isize</td>
+<td align="center">usize</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">进制</th>
+<th align="center">例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">十进制</td>
+<td align="center">12_345 或 12345</td>
+</tr>
+<tr>
+<td align="center">十六进制</td>
+<td align="center">0xff</td>
+</tr>
+<tr>
+<td align="center">八进制</td>
+<td align="center">0o77</td>
+</tr>
+<tr>
+<td align="center">二进制</td>
+<td align="center">0b1111_0000（推荐）</td>
+</tr>
+<tr>
+<td align="center">字节(只能表示 u8 型)</td>
+<td align="center">b’A’</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>下划线的设计能方便程员计数，当然添加下划线也是可以的。</p>
+</blockquote>
+<h2 id="浮点"><a href="#浮点" class="headerlink" title="浮点"></a>浮点</h2><p>有两种类型：</p>
+<ul>
+<li>f32：32位浮点</li>
+<li>f64：64位浮点</li>
+</ul>
+<h2 id="布尔"><a href="#布尔" class="headerlink" title="布尔"></a>布尔</h2><p>使用<font color="#ff0000">bool</font>关键字进行声明，有两个取值。</p>
+<ul>
+<li>ture</li>
+<li>false</li>
+</ul>
+<blockquote>
+<p>在判断中，rust严格使用布尔类型，不同于其他语言的<strong>非零即真</strong>。</p>
+</blockquote>
+<h2 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h2><p>使用<font color="#ff0000">char</font>关键字进行声明，rust的字符型占<strong>4字节</strong>，是Unicode，使用单引号。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span> = <span class="string">&quot;s&quot;</span>; <span class="comment">//字符串</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">c</span> = <span class="string">&#x27;c&#x27;</span>; <span class="comment">//字符</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = <span class="number">65</span> <span class="keyword">as</span> <span class="type">char</span>; <span class="comment">//由整型创建</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h1><h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><ul>
+<li><strong>..y</strong><br> 等价于 0..y。</li>
+<li><strong>x..</strong><br> 等价于位置 x 到数据结束。</li>
+<li><strong>..</strong><br> 等价于位置 0 到结束(for循环不允许这种遍历)。</li>
+</ul>
+<p>快速将 String 转换成 &amp;str：</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s1</span> = <span class="type">String</span>::<span class="title function_ invoke__">from</span>(<span class="string">&quot;hello&quot;</span>); <span class="comment">//String类型</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">s2</span> = &amp;s1[..]; <span class="comment">//&amp;str类型</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>使用符合数据类型不可避免地会使用迭代器，下面是迭代器的基础用法。<br><del>过几天再写</del></p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组不同于元组，数组要求使用相同的数据类型。</p>
+<h3 id="普通数组"><a href="#普通数组" class="headerlink" title="普通数组"></a>普通数组</h3><h4 id="申明"><a href="#申明" class="headerlink" title="申明"></a>申明</h4><p>数组用一对 [ ] 包括的同类型数据。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">//声明</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">b</span>: [<span class="type">i32</span>; <span class="number">5</span>] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">c</span> = [<span class="number">3</span>; <span class="number">5</span>];  <span class="comment">//let c = [3, 3, 3, 3, 3];  </span></span><br></pre></td></tr></table></figure>
+<h4 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h4><p>数组通过下标访问，如果需要修改数组的元素，需要添加mut关键字。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> <span class="variable">first</span> = a[<span class="number">0</span>];    </span><br><span class="line">a[<span class="number">0</span>] = <span class="number">123</span>; <span class="comment">// 错误：数组 a 不可变  </span></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">a</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];  </span><br><span class="line">a[<span class="number">0</span>] = <span class="number">4</span>; <span class="comment">// 正确</span></span><br></pre></td></tr></table></figure>
+<h3 id="可变数组"><a href="#可变数组" class="headerlink" title="可变数组"></a>可变数组</h3><p>准确的说应该叫做向量，类似于C++中的vector，类型为Vec&lt;T&gt;。</p>
+<h4 id="申明-1"><a href="#申明-1" class="headerlink" title="申明"></a>申明</h4><p>可以使用以下的两种方式创建一个可变数组。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">vector</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="type">Vec</span>::<span class="title function_ invoke__">new</span>(); <span class="comment">// 创建类型为 i32 的空向量</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">vector</span> = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>];     <span class="comment">// 通过数组创建向量</span></span><br></pre></td></tr></table></figure>
+<h4 id="拼接"><a href="#拼接" class="headerlink" title="拼接"></a>拼接</h4><p>使用<strong>append</strong>方法实现两个<strong>同类型</strong>的可变数组的拼接。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">v1</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="built_in">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">8</span>];  </span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">v2</span>: <span class="type">Vec</span>&lt;<span class="type">i32</span>&gt; = <span class="built_in">vec!</span>[<span class="number">16</span>, <span class="number">32</span>, <span class="number">64</span>];  </span><br><span class="line">v1.<span class="title function_ invoke__">append</span>(&amp;<span class="keyword">mut</span> v2);  </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意写成可变的引用类型</p>
+</blockquote>
+<h4 id="访问-1"><a href="#访问-1" class="headerlink" title="访问"></a>访问</h4><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="字符串引用-str"><a href="#字符串引用-str" class="headerlink" title="字符串引用 &amp;str"></a>字符串引用 &amp;str</h3><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">s</span>:&amp;<span class="type">str</span> = <span class="string">&quot;hello world&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，字符串引用类型是无法修改的。</p>
+<h3 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串 String"></a>字符串 String</h3><p><del>过几天再写</del></p>
+<h2 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h2><p><del>过几天再写</del></p>
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>和python类似，rust元组支持不同数据类型，比较合适作为参数传递。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">tuple</span> = (<span class="number">1</span>, <span class="number">2.0</span>, <span class="string">&quot;a&quot;</span>); <span class="comment">//定义</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, tuple.<span class="number">0</span>); <span class="comment">//打印下标为0的元素</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> (x, y, z) = (<span class="number">1</span>, <span class="number">2.0</span>, <span class="string">&quot;a&quot;</span>); <span class="comment">//参数的接收方式</span></span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, y);</span><br></pre></td></tr></table></figure>
+
+<h1 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h1><h2 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h2><p>rust的枚举类型比较复杂，可以在枚举类型中定义数据类型。使用<font color="#ff0000">enum</font>定义一个枚举。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Book1</span> &#123;  </span><br><span class="line">    Papery,</span><br><span class="line">    Electronic  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">Book2</span> &#123;</span><br><span class="line">    <span class="title function_ invoke__">Papery</span>(<span class="type">u32</span>),</span><br><span class="line">    <span class="title function_ invoke__">Electronic</span>(<span class="type">String</span>),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Option枚举类"><a href="#Option枚举类" class="headerlink" title="Option枚举类"></a>Option枚举类</h2>]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
+        <tag>rust</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3、基本控制流</title>
+    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/3%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h1><p><font color="#ff0000">rust中的判断严格限制为布尔类型</font>，不同于其他语言的非0即真。</p>
+<h2 id="if-else-if-else语句"><a href="#if-else-if-else语句" class="headerlink" title="if - else if - else语句"></a>if - else if - else语句</h2><p>这样经典的判断rust同样支持，但是不同于C语言，<font color="#ff0000">rust的每个if-else块必须使用{ }</font>，不允许独立的语句；不同于go语言，<font color="#ff0000">rust允许{在单独的行上</font>。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">a</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> a==<span class="number">1</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//case 1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> a &gt; <span class="number">1</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//case 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//case 3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三目运算"><a href="#三目运算" class="headerlink" title="三目运算"></a>三目运算</h2><p>可以使用一个参数来接收作用域中的返回值</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;condition&gt; &#123; block <span class="number">1</span> &#125; <span class="keyword">else</span> &#123; block <span class="number">2</span> &#125; </span><br></pre></td></tr></table></figure>
+
+<h2 id="match"><a href="#match" class="headerlink" title="match"></a>match</h2><p>在rust中<strong>match</strong>关键字用于实现一个类似于C++中的<strong>switch</strong>的的选择分支结构，常常和枚举类型进行联用。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">match</span> 枚举类实例 &#123;</span><br><span class="line">    分类<span class="number">1</span> =&gt; &#123;</span><br><span class="line">	    函数体</span><br><span class="line">    &#125;,</span><br><span class="line">    分类<span class="number">2</span> =&gt; &#123;</span><br><span class="line">	    函数体</span><br><span class="line">    &#125;,</span><br><span class="line">    ...</span><br><span class="line">    _ =&gt; &#123;</span><br><span class="line">	    default的函数体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>既然是函数体，可以是允许有返回值的。可以在<strong>match</strong>添加参数来接收这个返回值。另外，其他情况使用下划线_表示。</p>
+<h2 id="if-let语句"><a href="#if-let语句" class="headerlink" title="if let语句"></a>if let语句</h2><p><strong>if let</strong>是只区分两种情况的match语句的”语法糖”，用于处理比较复杂的语句，对于枚举类依然适用。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> 匹配值 = 源变量 &#123;</span><br><span class="line">    语句块</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//例外</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><p>均可以使用<font color="#ff0000">break</font>关键字跳出。</p>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">i</span> = <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">10</span> &#123;  </span><br><span class="line">    <span class="comment">// 循环体 </span></span><br><span class="line">    i += <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="loop循环"><a href="#loop循环" class="headerlink" title="loop循环"></a>loop循环</h2><p>用于构建无限循环。</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line">    <span class="keyword">loop</span> &#123;  </span><br><span class="line">        <span class="comment">// 循环体 </span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>rust的for关键字作用类似python或是C++ algorithm中的for_each，用于遍历迭代器对象。<br>可以用于遍历切片：</p>
+<figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="number">0</span>..<span class="number">10</span> </span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">println!</span>(<span class="string">&quot;&#123;&#125;&quot;</span>, i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Tips:可以加上小括号将切片视为一个迭代器对象，对步长和正序、倒序进行控制</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
+        <tag>rust</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4、函数</title>
+    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/4%E3%80%81%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+      <tags>
+        <tag>语言学习</tag>
+        <tag>rust</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/5%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8EIO/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/6%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81%E7%89%B9%E6%80%A7%E4%B8%8E%E6%B3%9B%E5%9E%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/7%E3%80%81%E5%AE%8F%E5%92%8C%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>rust学习</category>
+      </categories>
   </entry>
 </search>
