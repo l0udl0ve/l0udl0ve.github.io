@@ -20,12 +20,12 @@
   <meta name="description" content="进制 二进制 00 01 -&gt; 10 八进制 逢8进1 十进制 逢10进1 1 2 3 4 5 6 7 8 9 -&gt;10 十六进制 逢16进1 六十进制 时钟 0:00 -&gt; 0:59 -&gt; 1:00  二进制 计算机中所有的信息都是以二进制的形式存储的 CPU只认识0和1，即二进制 因为二进制复杂，所以很多软件改用十六进制来简写二进制二进制转十进制   101101011">
 <meta property="og:type" content="article">
 <meta property="og:title" content="汇编1">
-<meta property="og:url" content="http://example.com/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%961/index.html">
+<meta property="og:url" content="http://example.com/2024/09/20/%E5%85%8D%E6%9D%80/1%E3%80%81%E6%B1%87%E7%BC%961/index.html">
 <meta property="og:site_name" content="l0ud!0ve的个人博客">
 <meta property="og:description" content="进制 二进制 00 01 -&gt; 10 八进制 逢8进1 十进制 逢10进1 1 2 3 4 5 6 7 8 9 -&gt;10 十六进制 逢16进1 六十进制 时钟 0:00 -&gt; 0:59 -&gt; 1:00  二进制 计算机中所有的信息都是以二进制的形式存储的 CPU只认识0和1，即二进制 因为二进制复杂，所以很多软件改用十六进制来简写二进制二进制转十进制   101101011">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-20T04:49:09.000Z">
-<meta property="article:modified_time" content="2024-09-21T12:40:36.627Z">
+<meta property="article:modified_time" content="2024-09-22T16:07:18.009Z">
 <meta property="article:author" content="l0ud!0ve">
 <meta property="article:tag" content="二进制">
 <meta property="article:tag" content="汇编">
@@ -119,7 +119,7 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%961/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/20/%E5%85%8D%E6%9D%80/1%E3%80%81%E6%B1%87%E7%BC%961/">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
@@ -148,10 +148,14 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1726922436627"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1727021238009"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6"><span class="toc-number">1.</span> <span class="toc-text">进制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-number">1.1.</span> <span class="toc-text">二进制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AE%BD%E5%BA%A6"><span class="toc-number">2.</span> <span class="toc-text">数据宽度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D"><span class="toc-number">2.1.</span> <span class="toc-text">位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E8%8A%82"><span class="toc-number">2.2.</span> <span class="toc-text">字节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97"><span class="toc-number">2.3.</span> <span class="toc-text">字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-number">3.</span> <span class="toc-text">通用寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">汇编指令</span></a></li></ol>
+                </div>
             
             <hr />
             <div itemprop="articleBody"><h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
@@ -323,7 +327,7 @@
                     <a class="tag-none-link" href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" rel="tag">二进制</a>, <a class="tag-none-link" href="/tags/%E6%B1%87%E7%BC%96/" rel="tag">汇编</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-09-21T12:40:36.627Z" itemprop="dateModified">最后编辑：2024-09-21</time>
+                    <time datetime="2024-09-22T16:07:18.009Z" itemprop="dateModified">最后编辑：2024-09-23</time>
                 </div>
             </div>
         </footer>
@@ -332,12 +336,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 汇编2" href="/2024/09/20/免杀/汇编2/">&lt; 上一篇</a>
+                <a title=" 2、汇编2" href="/2024/09/20/免杀/2、汇编2/">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" 环境配置" href="/2024/09/20/rust学习/环境配置/">下一篇 &gt;</a>
+                <a title=" 1、环境配置" href="/2024/09/20/rust学习/1、环境配置/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -374,7 +378,7 @@
                 文章
             </span>
             <span class="count">
-                6
+                12
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -398,12 +402,33 @@
             
                     <div class="sticky-area">
                 
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%88%B6"><span class="toc-text">进制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-text">二进制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AE%BD%E5%BA%A6"><span class="toc-text">数据宽度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D"><span class="toc-text">位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E8%8A%82"><span class="toc-text">字节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97"><span class="toc-text">字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-text">通用寄存器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E7%BC%96%E6%8C%87%E4%BB%A4"><span class="toc-text">汇编指令</span></a></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/rust%E5%AD%A6%E4%B9%A0/">rust学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%8D%E6%9D%80/">免杀</a><span class="category-list-count">4</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/rust%E5%AD%A6%E4%B9%A0/">rust学习</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%8D%E6%9D%80/">免杀</a><span class="category-list-count">4</span></li></ul>
   </aside>
 
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/rust/" style="font-size: 0.6em;">rust</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 0.8em;">二进制</a> <a href="/tags/%E6%B1%87%E7%BC%96/" style="font-size: 0.8em;">汇编</a> <a href="/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" style="font-size: 0.8em;">语言学习</a>
+      </div>
+  </aside>
 
             
                 
@@ -415,34 +440,50 @@
         
           
           
-            <a class="list-group-item" href="/2024/09/21/rust%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><i class="fa  fa-book"></i> 数据类型</a>
+            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/3%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"><i class="fa  fa-book"></i> 3、基本控制流</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2024/09/20/rust%E5%AD%A6%E4%B9%A0/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fa  fa-book"></i> 环境配置</a>
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/4%E3%80%81%E5%87%BD%E6%95%B0/"><i class="fa  fa-book"></i> 4、函数</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%961/"><i class="fa  fa-book"></i> 汇编1</a>
+            <a class="list-group-item" href="/2024/09/21/rust%E5%AD%A6%E4%B9%A0/2%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><i class="fa  fa-book"></i> 2、数据类型</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%962/"><i class="fa  fa-book"></i> 汇编2</a>
+            <a class="list-group-item" href="/2024/09/20/rust%E5%AD%A6%E4%B9%A0/1%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fa  fa-book"></i> 1、环境配置</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2024/09/20/%E5%85%8D%E6%9D%80/%E6%B1%87%E7%BC%963/"><i class="fa  fa-book"></i> 汇编3</a>
+            <a class="list-group-item" href="/2024/09/20/%E5%85%8D%E6%9D%80/1%E3%80%81%E6%B1%87%E7%BC%961/"><i class="fa  fa-book"></i> 汇编1</a>
             
           
         
+          
+            
+          
+            
           
             
       </ul>
