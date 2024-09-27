@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   
   
-  <title>查看动态 | l0ud!0ve的个人博客</title>
+  <title>8、错误恢复和并发编程 | l0ud!0ve的个人博客</title>
   
   <meta name="author" content="l0ud!0ve" />
   <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,16 +15,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="rust, 语言学习" />
   
   <meta property="og:type" content="article">
-<meta property="og:title" content="查看动态">
+<meta property="og:title" content="8、错误恢复和并发编程">
 <meta property="og:url" content="http://example.com/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="l0ud!0ve的个人博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-23T08:43:43.989Z">
-<meta property="article:modified_time" content="2024-09-24T05:21:27.616Z">
+<meta property="article:modified_time" content="2024-09-24T11:58:00.775Z">
 <meta property="article:author" content="l0ud!0ve">
+<meta property="article:tag" content="语言学习">
+<meta property="article:tag" content="rust">
 <meta name="twitter:card" content="summary">
   
   <!-- 站点验证相关 -->
@@ -127,6 +129,8 @@
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">8、错误恢复和并发编程</h1>
+            
             
             <ul class="kratos-post-meta text-center">
                 <li><time datetime="2024-09-23T08:43:43.989Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-09-23</time></li>
@@ -148,6 +152,11 @@
         </header>
         <div class="kratos-post-content">
             
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1727179080775"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
             
             
             <hr />
@@ -163,10 +172,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    
+                    <a class="tag-none-link" href="/tags/rust/" rel="tag">rust</a>, <a class="tag-none-link" href="/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" rel="tag">语言学习</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-09-24T05:21:27.616Z" itemprop="dateModified">最后编辑：2024-09-24</time>
+                    <time datetime="2024-09-24T11:58:00.775Z" itemprop="dateModified">最后编辑：2024-09-24</time>
                 </div>
             </div>
         </footer>
@@ -175,7 +184,7 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" (无标题)" href="/2024/09/23/rust学习/7、宏和智能指针/">&lt; 上一篇</a>
+                <a title=" 7、宏和智能指针" href="/2024/09/23/rust学习/7、宏和智能指针/">&lt; 上一篇</a>
             </div>
             
             
@@ -253,7 +262,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/rust/" style="font-size: 0.6em;">rust</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 0.8em;">二进制</a> <a href="/tags/%E6%B1%87%E7%BC%96/" style="font-size: 0.8em;">汇编</a> <a href="/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" style="font-size: 0.8em;">语言学习</a>
+        <a href="/tags/rust/" style="font-size: 0.7em;">rust</a> <a href="/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/" style="font-size: 0.6em;">二进制</a> <a href="/tags/%E6%B1%87%E7%BC%96/" style="font-size: 0.6em;">汇编</a> <a href="/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" style="font-size: 0.8em;">语言学习</a>
       </div>
   </aside>
 
@@ -267,46 +276,42 @@
         
           
           
+            <a class="list-group-item" href="/2024/09/27/rust%E5%AD%A6%E4%B9%A0/5%E3%80%81%E6%96%87%E4%BB%B6%E4%B8%8EIO/"><i class="fa  fa-book"></i> 5、文件与IO</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/09/24/rust%E5%AD%A6%E4%B9%A0/4%E3%80%81%E5%87%BD%E6%95%B0/"><i class="fa  fa-book"></i> 4、函数</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/3%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"><i class="fa  fa-book"></i> 3、基本控制流</a>
             
           
         
           
           
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/4%E3%80%81%E5%87%BD%E6%95%B0/"><i class="fa  fa-book"></i> 4、函数</a>
+            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"><i class="fa  fa-book"></i> 8、错误恢复和并发编程</a>
             
           
         
           
           
-            <a class="list-group-item" href="/2024/09/21/rust%E5%AD%A6%E4%B9%A0/2%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><i class="fa  fa-book"></i> 2、数据类型</a>
+            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/7%E3%80%81%E5%AE%8F%E5%92%8C%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/"><i class="fa  fa-book"></i> 7、宏和智能指针</a>
             
           
         
           
-          
-            <a class="list-group-item" href="/2024/09/20/%E5%85%8D%E6%9D%80/1%E3%80%81%E6%B1%87%E7%BC%961/"><i class="fa  fa-book"></i> 汇编1</a>
             
           
-        
-          
-          
-            <a class="list-group-item" href="/2024/09/20/rust%E5%AD%A6%E4%B9%A0/1%E3%80%81%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fa  fa-book"></i> 1、环境配置</a>
             
           
-        
+            
+          
+            
           
             
           
