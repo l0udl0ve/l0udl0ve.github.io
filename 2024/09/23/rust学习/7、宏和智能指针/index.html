@@ -17,14 +17,16 @@
   
     <meta name="keywords" content="rust, 语言学习" />
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="宏可以使用macro_rules!来定义一个宏，使用宏名称!进行宏的调用。常用的print、println、format、vec都是宏。由于本人水平有限，加上在其他语言也不经常使用宏，这部分等后续再完善，可以参考这篇优秀博客 智能指针Box&amp;ltT&amp;gt在堆上分配一块内存，并将值存储在这个内存中。 12let b &#x3D; Box::new(5);  println!(&quot;b &#x3D;">
+<meta property="og:type" content="article">
 <meta property="og:title" content="7、宏和智能指针">
 <meta property="og:url" content="http://example.com/2024/09/23/rust%E5%AD%A6%E4%B9%A0/7%E3%80%81%E5%AE%8F%E5%92%8C%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/index.html">
 <meta property="og:site_name" content="l0ud!0ve的个人博客">
+<meta property="og:description" content="宏可以使用macro_rules!来定义一个宏，使用宏名称!进行宏的调用。常用的print、println、format、vec都是宏。由于本人水平有限，加上在其他语言也不经常使用宏，这部分等后续再完善，可以参考这篇优秀博客 智能指针Box&amp;ltT&amp;gt在堆上分配一块内存，并将值存储在这个内存中。 12let b &#x3D; Box::new(5);  println!(&quot;b &#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2024/09/23/rust%E5%AD%A6%E4%B9%A0/7%E3%80%81%E5%AE%8F%E5%92%8C%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/images/thumb/rust.webp">
 <meta property="article:published_time" content="2024-09-23T08:41:28.226Z">
-<meta property="article:modified_time" content="2024-09-28T11:53:48.479Z">
+<meta property="article:modified_time" content="2024-09-29T04:42:33.063Z">
 <meta property="article:author" content="l0ud!0ve">
 <meta property="article:tag" content="语言学习">
 <meta property="article:tag" content="rust">
@@ -144,7 +146,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            0
+                            1227
                         
                         字
                     </li>
@@ -156,13 +158,39 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1727524428479"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1727584953063"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
             
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%8F"><span class="toc-number">1.</span> <span class="toc-text">宏</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">2.</span> <span class="toc-text">智能指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Box-ltT-gt"><span class="toc-number">2.1.</span> <span class="toc-text">Box&amp;ltT&amp;gt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rc"><span class="toc-number">2.2.</span> <span class="toc-text">Rc&lt;T&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arc"><span class="toc-number">2.3.</span> <span class="toc-text">Arc&lt;T&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RefCell"><span class="toc-number">2.4.</span> <span class="toc-text">RefCell&lt;T&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mutex-ltT-gt"><span class="toc-number">2.5.</span> <span class="toc-text">Mutex&amp;ltT&amp;gt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RwLock-ltT-gt"><span class="toc-number">2.6.</span> <span class="toc-text">RwLock&amp;ltT&amp;gt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Weak"><span class="toc-number">2.7.</span> <span class="toc-text">Weak&lt;T&gt;</span></a></li></ol></li></ol>
+                </div>
+            
             <hr />
-            <div itemprop="articleBody"></div>
+            <div itemprop="articleBody"><h1 id="宏"><a href="#宏" class="headerlink" title="宏"></a>宏</h1><p>可以使用<code>macro_rules!</code>来定义一个宏，使用<code>宏名称!</code>进行宏的调用。常用的print、println、format、vec都是宏。<br><del>由于本人水平有限，加上在其他语言也不经常使用宏，这部分等后续再完善，</del>可以参考这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/hualuohuakai2014/article/details/116119339">优秀博客</a></p>
+<h1 id="智能指针"><a href="#智能指针" class="headerlink" title="智能指针"></a>智能指针</h1><h2 id="Box-ltT-gt"><a href="#Box-ltT-gt" class="headerlink" title="Box&amp;ltT&amp;gt"></a><font color="#ff0000">Box&amp;ltT&amp;gt</font></h2><p>在堆上分配一块内存，并将值存储在这个内存中。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="variable">b</span> = <span class="type">Box</span>::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="built_in">println!</span>(<span class="string">&quot;b = &#123;&#125;&quot;</span>, b);  </span><br></pre></td></tr></table></figure>
+
+<h2 id="Rc"><a href="#Rc" class="headerlink" title="Rc&lt;T&gt;"></a>Rc&lt;T&gt;</h2><p><strong>单线程的引用计数指针</strong>，允许多个所有者共享数据，它使用引用计数来跟踪数据的所有者数量，并在所有者数量为零时释放数据。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::rc::Rc;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">data</span> = Rc::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">data_clone</span> = Rc::<span class="title function_ invoke__">clone</span>(&amp;data); </span><br></pre></td></tr></table></figure>
+
+<h2 id="Arc"><a href="#Arc" class="headerlink" title="Arc&lt;T&gt;"></a>Arc&lt;T&gt;</h2><p>与 Rc&lt;T&gt; 类似，但是可以安全地在多线程环境中共享数据，因为它使用原子操作来更新引用计数。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::sync::Arc;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">data</span> = Arc::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">data_clone</span> = Arc::<span class="title function_ invoke__">clone</span>(&amp;data); </span><br></pre></td></tr></table></figure>
+
+<h2 id="RefCell"><a href="#RefCell" class="headerlink" title="RefCell&lt;T&gt;"></a>RefCell&lt;T&gt;</h2><p>RefCell&lt;T&gt; 允许在运行时检查借用规则，它使用内部可变性来提供了一种安全的内部可变性模式，允许在不可变引用的情况下修改数据。</p>
+<p>但是，RefCell&lt;T&gt; 只能用于单线程环境。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::cell::RefCell;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">data</span> = RefCell::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">borrowed_data</span> = data.<span class="title function_ invoke__">borrow_mut</span>();  </span><br><span class="line">*borrowed_data = <span class="number">10</span>;  </span><br></pre></td></tr></table></figure>
+
+<h2 id="Mutex-ltT-gt"><a href="#Mutex-ltT-gt" class="headerlink" title="Mutex&amp;ltT&amp;gt"></a><font color="#ff0000">Mutex&amp;ltT&amp;gt</font></h2><p><strong>互斥锁</strong></p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::sync::Mutex;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">m</span> = Mutex::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="keyword">let</span> <span class="keyword">mut </span><span class="variable">data</span> = m.<span class="title function_ invoke__">lock</span>().<span class="title function_ invoke__">unwrap</span>(); </span><br></pre></td></tr></table></figure>
+
+<h2 id="RwLock-ltT-gt"><a href="#RwLock-ltT-gt" class="headerlink" title="RwLock&amp;ltT&amp;gt"></a><font color="#ff0000">RwLock&amp;ltT&amp;gt</font></h2><p><strong>读写锁</strong>，允许同时写，但是写入是原子的。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::sync::RwLock;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">lock</span> = RwLock::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">read_guard</span> = lock.<span class="title function_ invoke__">read</span>().<span class="title function_ invoke__">unwrap</span>(); </span><br></pre></td></tr></table></figure>
+
+<h2 id="Weak"><a href="#Weak" class="headerlink" title="Weak&lt;T&gt;"></a>Weak&lt;T&gt;</h2><p>Weak&lt;T&gt; 是 Rc&lt;T&gt; 的非拥有智能指针，它<strong>不增加引用计数</strong>，用于解决循环引用问题。</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> std::rc::&#123;Rc, Weak&#125;;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">five</span> = Rc::<span class="title function_ invoke__">new</span>(<span class="number">5</span>);  </span><br><span class="line"><span class="keyword">let</span> <span class="variable">weak_five</span> = Rc::<span class="title function_ invoke__">downgrade</span>(&amp;five);</span><br></pre></td></tr></table></figure>
+</div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -177,7 +205,7 @@
                     <a class="tag-none-link" href="/tags/rust/" rel="tag">rust</a>, <a class="tag-none-link" href="/tags/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" rel="tag">语言学习</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-09-28T11:53:48.479Z" itemprop="dateModified">最后编辑：2024-09-28</time>
+                    <time datetime="2024-09-29T04:42:33.063Z" itemprop="dateModified">最后编辑：2024-09-29</time>
                 </div>
             </div>
         </footer>
@@ -191,7 +219,7 @@
             
             
             <div class="nav-next clearfix">
-                <a title=" 8、错误恢复和并发编程" href="/2024/09/23/rust学习/8、错误恢复和并发编程/">下一篇 &gt;</a>
+                <a title=" 8、错误处理和并发编程" href="/2024/09/23/rust学习/8、错误处理和异步并发/">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -252,6 +280,18 @@
             
                     <div class="sticky-area">
                 
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%8F"><span class="toc-text">宏</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-text">智能指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Box-ltT-gt"><span class="toc-text">Box&amp;ltT&amp;gt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rc"><span class="toc-text">Rc&lt;T&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Arc"><span class="toc-text">Arc&lt;T&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RefCell"><span class="toc-text">RefCell&lt;T&gt;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mutex-ltT-gt"><span class="toc-text">Mutex&amp;ltT&amp;gt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RwLock-ltT-gt"><span class="toc-text">RwLock&amp;ltT&amp;gt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Weak"><span class="toc-text">Weak&lt;T&gt;</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
@@ -296,7 +336,7 @@
         
           
           
-            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"><i class="fa  fa-book"></i> 8、错误恢复和并发编程</a>
+            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%92%8C%E5%BC%82%E6%AD%A5%E5%B9%B6%E5%8F%91/"><i class="fa  fa-book"></i> 8、错误处理和并发编程</a>
             
           
         

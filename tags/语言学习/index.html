@@ -325,7 +325,7 @@ if - else if - else语句这样经典的判断rust同样支持，但是不同于
                     </div>
                 
                 <div class="kratos-entry-thumb-new">
-                    <a href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">
+                    <a href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%92%8C%E5%BC%82%E6%AD%A5%E5%B9%B6%E5%8F%91/">
                         
                             <img class="kratos-entry-thumb-new-img" src="/images/thumb/rust.webp" alt="">
                         
@@ -334,12 +334,16 @@ if - else if - else语句这样经典的判断rust同样支持，但是不同于
                 <div class="kratos-post-inner-new">
                     <header class="kratos-entry-header-new">
                             <a class="label-link" href="/categories/rust%E5%AD%A6%E4%B9%A0/">rust学习</a>
-                        <h2 class="kratos-entry-title-new"><a href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" itemprop="mainEntityOfPage"><span itemprop="name headline">8、错误恢复和并发编程</span></a>
+                        <h2 class="kratos-entry-title-new"><a href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%92%8C%E5%BC%82%E6%AD%A5%E5%B9%B6%E5%8F%91/" itemprop="mainEntityOfPage"><span itemprop="name headline">8、错误处理和并发编程</span></a>
                     </header>
                     <div class="kratos-entry-content-new">
                         <p itemProp="description">
                             
-                                
+                                错误不可恢复错误不可恢复错误可以使用panic宏来定义，通过设置环境变量可在运行结束后打印backtrace
+1panic!(&quot;error&quot;);
+
+linux：
+1env:RUST_BACKTRACE=1; car...
                             
                         </p>
                     </div>
@@ -362,7 +366,7 @@ if - else if - else语句这样经典的判断rust同样支持，但是不同于
                         
                     </span>
                     <span class="pull-right">
-                        <a class="read-more" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                        <a class="read-more" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%92%8C%E5%BC%82%E6%AD%A5%E5%B9%B6%E5%8F%91/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
                     </span>
                 </footer>
             </div>
@@ -393,7 +397,8 @@ if - else if - else语句这样经典的判断rust同样支持，但是不同于
                     <div class="kratos-entry-content-new">
                         <p itemProp="description">
                             
-                                
+                                宏可以使用macro_rules!来定义一个宏，使用宏名称!进行宏的调用。常用的print、println、format、vec都是宏。由于本人水平有限，加上在其他语言也不经常使用宏，这部分等后续再完善，可以参考这篇优秀博客
+智能指针...
                             
                         </p>
                     </div>
@@ -702,7 +707,7 @@ Code...
         
           
           
-            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E6%81%A2%E5%A4%8D%E5%92%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"><i class="fa  fa-book"></i> 8、错误恢复和并发编程</a>
+            <a class="list-group-item" href="/2024/09/23/rust%E5%AD%A6%E4%B9%A0/8%E3%80%81%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%92%8C%E5%BC%82%E6%AD%A5%E5%B9%B6%E5%8F%91/"><i class="fa  fa-book"></i> 8、错误处理和并发编程</a>
             
           
         
