@@ -38,7 +38,7 @@ import { z } from "astro/zod";
 
 // https://astro.build/config
 export default defineConfig({
-	site: siteConfig.site_url,
+	site: "https://l0udl0ve.github.io/",
 	
 	base: "/",
 	trailingSlash: "always",
@@ -183,7 +183,7 @@ export default defineConfig({
 			rehypeSlug,
 			rehypeMermaid,
 			rehypeFigure,
-			[rehypeExternalLinks, { siteUrl: siteConfig.site_url }],
+			[rehypeExternalLinks, { siteUrl: "https://l0udl0ve.github.io/" }],
 			[rehypeEmailProtection, { method: "base64" }],
 			[rehypeComponents, { components: { github: GithubCardComponent } }],
 			[rehypeAutolinkHeadings, {
