@@ -1,0 +1,181 @@
+---
+import { Icon } from "astro-icon/components";
+import ImageWrapper from "@/components/common/ImageWrapper.astro";
+import { profileConfig } from "@/config/profileConfig";
+import { url } from "@/utils/url-utils";
+---
+
+<div class="card-base p-3">
+  {/* 原有头像和名称部分保持不变... */}
+  <a
+    aria-label="Go to About Page"
+    href={url("/about/")}
+    class="group block relative mx-auto mt-1 lg:mx-0 lg:mt-0 mb-3 max-w-48 lg:max-w-none overflow-hidden rounded-xl active:scale-95"
+  >
+    <div class="absolute transition pointer-events-none group-hover:bg-black/30 group-active:bg-black/50 w-full h-full z-50 flex items-center justify-center">
+      <Icon name="fa7-regular:address-card" class="transition opacity-0 scale-90 group-hover:scale-100 group-hover:opacity-100 text-white text-5xl" />
+    </div>
+    <ImageWrapper
+      src={profileConfig.avatar || ""}
+      alt="Profile Image of the Author"
+      class="mx-auto lg:w-full h-full lg:mt-0"
+      loading="eager"
+      fetchpriority="high"
+      widths={[350]}
+      sizes="350px"
+    />
+  </a>
+
+  <div class="px-2">
+    <div class="font-bold text-xl text-center mb-1 dark:text-neutral-50 transition">
+      {profileConfig.name}
+    </div>
+    <div class="h-1 w-5 bg-(--primary) mx-auto rounded-full mb-2 transition"></div>
+    <div class="text-center text-neutral-400 mb-2.5 transition">
+      {profileConfig.bio}
+    </div>
+    
+    <div class="flex flex-wrap gap-2 justify-center mb-1">
+      {profileConfig.links.length > 1 && profileConfig.links.map(item => {
+        const showName = item.showName;
+        const className = showName 
+          ? "btn-regular rounded-lg h-10 gap-2 px-3 font-bold active:scale-95" 
+          : "btn-regular rounded-lg h-10 w-10 active:scale-90";
+
+        if (item.name == "Email") {
+          const rawEmail = item.url;
+          return (
+            <button
+              type="button"
+              aria-label={item.name}
+              class={className}
+              data-role="email-trigger"
+              data-email={rawEmail}
+            >
+              <Icon name={item.icon} class="text-[1.5rem]"></Icon>
+              {showName && item.name}
+            </button>
+          );
+        } else {
+          return (
+            <a rel="me" aria-label={item.name} href={item.url} target="_blank" class={className}>
+              <Icon name={item.icon} class="text-[1.5rem]"></Icon>
+              {showName && item.name}
+            </a>
+          );
+        }
+      })}
+
+      {/* 处理 links.length == 1 的情况（逻辑同上） */}
+      {profileConfig.links.length == 1 && (function(item){
+         if (item.url.startsWith("mailto:")) {
+            const rawEmail = item.url.replace("mailto:", "");
+            return (
+              <button
+                type="button"
+                aria-label={item.name}
+                class="btn-regular rounded-lg h-10 gap-2 px-3 font-bold active:scale-95"
+                data-role="email-trigger"
+                data-email={rawEmail}
+              >
+                <Icon name={item.icon} class="text-[1.5rem]"></Icon>
+                {item.name}
+              </button>
+            );
+         } else {
+            return (
+              <a rel="me" aria-label={item.name} href={item.url} target="_blank" class="btn-regular rounded-lg h-10 gap-2 px-3 font-bold active:scale-95">
+                <Icon name={item.icon} class="text-[1.5rem]"></Icon>
+                {item.name}
+              </a>
+            );
+         }
+      })(profileConfig.links[0])}
+    </div>
+  </div>
+
+  {/* 【修改点】直接定位弹窗到左上角，移除铺满全屏的容器 */}
+  <div id="email-modal" class="fixed top-88 left-0 z-[100] hidden">
+    {/* 弹窗内容 */}
+    <div class="relative bg-white dark:bg-neutral-800 rounded-2xl shadow-2xl w-70 p-8 transform transition-all scale-95 opacity-0" id="modal-content">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-neutral-800 dark:text-white">联系邮箱</h3>
+        <button id="modal-close-btn" class="text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 transition">
+          <Icon name="fa7-solid:xmark" class="text-2xl"></Icon>
+        </button>
+      </div>
+      
+      <div class="bg-neutral-100 dark:bg-neutral-700 p-4 rounded-xl flex items-center justify-between gap-3 mb-6">
+        <span id="modal-email-text" class="text-neutral-700 dark:text-neutral-200 font-mono break-all select-all"></span>
+      </div>
+
+      {/* 仅保留复制地址按钮 */}
+      <button id="copy-email-btn" class="w-full bg-(--primary) text-white font-bold py-3 px-4 rounded-xl hover:opacity-90 transition active:scale-95 flex items-center justify-center gap-2">
+        <Icon name="fa7-regular:copy"></Icon>
+        复制地址
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 【修改点】微调脚本，移除 flex 相关的 class 操作 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('email-modal');
+    const content = document.getElementById('modal-content');
+    const closeBtn = document.getElementById('modal-close-btn');
+    const emailText = document.getElementById('modal-email-text');
+    const copyBtn = document.getElementById('copy-email-btn');
+    
+    // 打开弹窗
+    function openModal(email) {
+      emailText.textContent = email;
+      
+      modal.classList.remove('hidden');
+      
+      // 简单的动画效果
+      setTimeout(() => {
+        content.classList.remove('scale-95', 'opacity-0');
+        content.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    }
+
+    // 关闭弹窗
+    function closeModal() {
+      content.classList.remove('scale-100', 'opacity-100');
+      content.classList.add('scale-95', 'opacity-0');
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // 绑定触发按钮（所有邮箱按钮）
+    document.querySelectorAll('[data-role="email-trigger"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const email = btn.getAttribute('data-email');
+        if (email) openModal(email);
+      });
+    });
+
+    // 关闭逻辑
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    // 复制功能
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(emailText.textContent);
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 已复制';
+        setTimeout(() => copyBtn.innerHTML = originalText, 2000);
+      } catch (err) {
+        alert('复制失败，请手动复制');
+      }
+    });
+  });
+</script>

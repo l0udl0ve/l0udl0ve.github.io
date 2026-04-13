@@ -1,0 +1,96 @@
+---
+import { Icon } from "astro-icon/components";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { url } from "@/utils/url-utils";
+---
+
+<MainGridLayout title={i18n(I18nKey.notFound)} description={i18n(I18nKey.notFoundDescription)}>
+    <div class="flex w-full rounded-(--radius-large) overflow-hidden relative min-h-[80vh]">
+        <div class="card-base z-10 px-4 md:px-9 py-12 relative w-full flex flex-col items-center justify-center text-center">
+            <!-- 404 大号数字 -->
+            <div class="text-6xl md:text-8xl font-bold text-(--primary) opacity-20 mb-4">
+                {i18n(I18nKey.notFound)}
+            </div>
+            
+            <!-- 游戏容器（极简，不做任何 CSS 缩放） -->
+            <div id="catch-the-cat" class="w-full mb-6 flex justify-center"></div>
+            
+            <!-- 标题 -->
+            <div class="text-2xl md:text-3xl font-bold mb-4 text-90">
+                {i18n(I18nKey.notFoundTitle)}
+            </div>
+            
+            <!-- 描述 -->
+            <p class="text-base md:text-lg text-75 mb-8 max-w-md">
+                {i18n(I18nKey.notFoundDescription)}
+            </p>
+            
+            <!-- 返回首页按钮 -->
+            <a 
+                href={url("/")}
+                class="inline-flex items-center gap-2 px-6 py-3 bg-(--primary) text-white rounded-(--radius-large) hover:bg-(--btn-content) transition-colors duration-200 font-medium"
+            >
+                <Icon name="material-symbols:home" class="text-xl" />
+                {i18n(I18nKey.backToHome)}
+            </a>
+        </div>
+    </div>
+
+    <!-- 游戏脚本 -->
+    <script is:inline src="/phaser-catch-the-cat/phaser.min.js"></script>
+    <script is:inline src="/phaser-catch-the-cat/catch-the-cat.js"></script>
+    
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                // 🔥 核心：只通过 r 参数控制大小，完全不用 CSS 缩放
+                const isMobile = window.innerWidth < 480;
+                const r = isMobile ? 12 : 16;
+
+                window.game = new CatchTheCatGame({
+                    w: 11,
+                    h: 11,
+                    r: r,
+                    initialWallCount: 8,
+                    backgroundColor: null,
+                    parent: 'catch-the-cat',
+                    statusBarAlign: 'center',
+                    credit: ''
+                });
+                
+                console.log('✅ 游戏初始化成功，点击无偏移！');
+            } catch (e) {
+                console.error('❌ 游戏初始化失败', e);
+            }
+        });
+    </script>
+</MainGridLayout>
+
+<style>
+    .card-base {
+        animation: fadeInUp 0.6s ease-out;
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+    }
+
+    /* 🔥 游戏容器：极简，只做居中，不碰 canvas */
+    #catch-the-cat {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        background: transparent;
+    }
+
+    /* 🔥 关键：完全移除对 canvas 的 CSS 缩放 */
+    /* 没有任何 canvas 相关的 CSS，让 Phaser 原生渲染 */
+</style>
