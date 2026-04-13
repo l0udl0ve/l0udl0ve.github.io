@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://firefly.cuteleaf.cn/sitemap-index.xml
+Sitemap: https://l0udl0ve.github.io/sitemap-index.xml
