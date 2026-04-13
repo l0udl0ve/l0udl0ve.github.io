@@ -197,7 +197,6 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 		server: {
 			watch: { ignored: ["**/package/**", "**/Firefly-docs/**"] },
-			// ✅ 修复：允许访问整个项目文件（解决CSS/样式/图片报错）
 			fs: { allow: ["."] }
 		},
 		resolve: {
