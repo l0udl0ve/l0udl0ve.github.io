@@ -14,9 +14,6 @@ import { url } from "@/utils/url-utils";
                 {i18n(I18nKey.notFound)}
             </div>
             
-            <!-- 游戏容器（极简，不做任何 CSS 缩放） -->
-            <div id="catch-the-cat" class="w-full mb-6 flex justify-center"></div>
-            
             <!-- 标题 -->
             <div class="text-2xl md:text-3xl font-bold mb-4 text-90">
                 {i18n(I18nKey.notFoundTitle)}
@@ -26,6 +23,9 @@ import { url } from "@/utils/url-utils";
             <p class="text-base md:text-lg text-75 mb-8 max-w-md">
                 {i18n(I18nKey.notFoundDescription)}
             </p>
+
+            <!-- 游戏容器（极简，不做任何 CSS 缩放） -->
+            <div id="catch-the-cat" class="w-full mb-6 flex justify-center"></div>
             
             <!-- 返回首页按钮 -->
             <a 
@@ -54,7 +54,7 @@ import { url } from "@/utils/url-utils";
                     h: 11,
                     r: r,
                     initialWallCount: 8,
-                    backgroundColor: null,
+                    backgroundColor: "FFFFFF",
                     parent: 'catch-the-cat',
                     statusBarAlign: 'center',
                     credit: ''
