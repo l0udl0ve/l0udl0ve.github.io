@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>!0ud10ve的个人博客</title><description>No description</description><link>https://l0udl0ve.github.io/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.8.11</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年4月15日 14:45:43</lastBuildDate><item><title>会议纪要</title><link>https://l0udl0ve.github.io/posts/%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</link><guid isPermaLink="true">https://l0udl0ve.github.io/posts/%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</guid><description>3.27 会议纪要</description><pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;智能化网络对抗&lt;a href=&quot;#智能化网络对抗&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;section&gt;&lt;h3&gt;自动化渗透测试&lt;a href=&quot;#自动化渗透测试&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;多步骤决策、推理&lt;/p&gt;&lt;p&gt;记忆衰退、规划短视、幻觉虚构&lt;/p&gt;&lt;p&gt;动作伪造、反馈篡改、指令脱轨&lt;/p&gt;&lt;p&gt;丢失关键词&lt;/p&gt;&lt;p&gt;提示词工程 -&amp;gt; 大模型工程 -&amp;gt; agent harness&lt;/p&gt;&lt;p&gt;基础渗透测试、流量？、每一步做详细记录保证真正落实&lt;/p&gt;&lt;p&gt;流量审计&lt;/p&gt;&lt;p&gt;智能体 vs 反智能体&lt;/p&gt;&lt;p&gt;pypi供应链投毒&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item><item><title>CVE-2023-20198</title><link>https://l0udl0ve.github.io/posts/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/cve-2023-20198/cve-2023-20198/</link><guid isPermaLink="true">https://l0udl0ve.github.io/posts/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/cve-2023-20198/cve-2023-20198/</guid><description>固件分析经验贴。</description><pubDate>Mon, 23 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;漏洞描述&lt;a href=&quot;#漏洞描述&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;未经身份验证的远程攻击者可以利用该漏洞创建具有最高访问权限的账户，进而控制受影响的系统。启用了Web UI功能的Cisco IOS XE设备均受该漏洞影响。&lt;/p&gt;&lt;/section&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>!0ud10ve的个人博客</title><description>No description</description><link>https://l0udl0ve.github.io/</link><templateTheme>Firefly</templateTheme><templateThemeVersion>6.8.11</templateThemeVersion><templateThemeUrl>https://github.com/CuteLeaf/Firefly</templateThemeUrl><lastBuildDate>2026年6月26日 18:11:40</lastBuildDate><item><title>Day1~10</title><link>https://l0udl0ve.github.io/posts/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/day110/</link><guid isPermaLink="true">https://l0udl0ve.github.io/posts/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/day110/</guid><description>小迪渗透测试。</description><pubDate>Fri, 26 Jun 2026 00:00:00 GMT</pubDate><content:encoded/></item><item><title>学习路线</title><link>https://l0udl0ve.github.io/posts/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</link><guid isPermaLink="true">https://l0udl0ve.github.io/posts/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</guid><description>小迪渗透测试学习规划。</description><pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;Java安全&lt;a href=&quot;#java安全&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Java安全学习资料:
+&lt;a href=&quot;https://github.com/HackJava/HackJava&quot; target=&quot;_blank&quot;&gt;https://github.com/HackJava/HackJava&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;IDEA&lt;/li&gt;
+&lt;li&gt;Maven&lt;/li&gt;
+&lt;li&gt;Java Web&lt;/li&gt;
+&lt;li&gt;反射&lt;/li&gt;
+&lt;li&gt;ASM/Javassist&lt;/li&gt;
+&lt;li&gt;JNDI：8u191低版本和高版本怎么打(反序列化/本地工厂)     ，以及如何审计&lt;/li&gt;
+&lt;li&gt;RMI是什么&lt;/li&gt;
+&lt;li&gt;Java Agent：启动原理和RASP的实现原理&lt;/li&gt;
+&lt;li&gt;JMX/JDWP&lt;/li&gt;
+&lt;li&gt;反序列化基础：gadget链、JEP290是什么&lt;/li&gt;
+&lt;li&gt;FastJson反序列化&lt;/li&gt;
+&lt;li&gt;WebLogic：二次反序列化、XML Decoder、IIOP/T3&lt;/li&gt;
+&lt;li&gt;Xstream反序列化&lt;/li&gt;
+&lt;li&gt;Hessian反序列化：dubbo&lt;/li&gt;
+&lt;li&gt;SnakeYAML反序列化&lt;/li&gt;
+&lt;li&gt;Shiro：Shiro经典漏洞、Padding Oracle漏洞形成原理、如何通过Shiro注入内存马Struts2&lt;/li&gt;
+&lt;li&gt;Spring: Spring4Shell、Spring EL、SpringBoot Actuator利用&lt;/li&gt;
+&lt;li&gt;Tomcat：Tomcat AJP RCE&lt;/li&gt;
+&lt;li&gt;内存马原理：原理是什么、有哪些内存马、内存马如何查杀&lt;/li&gt;
+&lt;li&gt;Log4J&lt;/li&gt;
+&lt;li&gt;其他组件漏洞：Apache&lt;/li&gt;
+&lt;/ul&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;云上安全&lt;a href=&quot;#云上安全&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://wiki.teamssix.com/&quot; target=&quot;_blank&quot;&gt;https://wiki.teamssix.com/&lt;/a&gt;
+&lt;a href=&quot;https://cloudsec.huoxian.cn/&quot; target=&quot;_blank&quot;&gt;https://cloudsec.huoxian.cn/&lt;/a&gt;
+&lt;a href=&quot;https://cloudsec.tencent.com/home/&quot; target=&quot;_blank&quot;&gt;https://cloudsec.tencent.com/home/&lt;/a&gt;
+&lt;a href=&quot;https://github.com/teamssix/awesome-cloud-security&quot; target=&quot;_blank&quot;&gt;https://github.com/teamssix/awesome-cloud-security&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;内网安全&lt;a href=&quot;#内网安全&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://attack.mitre.org/&quot; target=&quot;_blank&quot;&gt;http://attack.mitre.org/&lt;/a&gt;
+&lt;a href=&quot;https://github.com/chriskalix/AD-Pentest-Notes&quot; target=&quot;_blank&quot;&gt;https://github.com/chriskalix/AD-Pentest-Notes&lt;/a&gt;&lt;/p&gt;&lt;p&gt;内网渗透分为&lt;span&gt;域渗透&lt;/span&gt;和&lt;span&gt;工作组渗透&lt;/span&gt;两类，亦分为&lt;span&gt;域环境渗透&lt;/span&gt;和&lt;span&gt;非域环境渗透&lt;/span&gt;。&lt;/p&gt;&lt;p&gt;与外网渗透区别:&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;外网渗透更侧重于找漏洞寻找突破口，考验的是白帽的综合能力，外网渗透的最终还是为了进入内网。&lt;/li&gt;
+&lt;li&gt;内网渗透更侧重于对目标的熟悉程度，对环境是否足够熟悉?对目标的情况是否了然于胸?哪里有敏感信息等等。&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;信息搜集：工作组、域收集（密码口令，网络环境，资产应用等）
+隐匿攻击：端口转发、跳板代理、隧道穿透、出网协议判断(常见工具)
+权限提升：内核(土豆系)，数据库，三方软件，bypassUAC，Linux提权技术等
+横向移动：口令HASH喷射、边界应用、委派攻击、Exchange攻防、Kerberos攻击，域控漏洞等
+权限维持：系统后门、WEB后门(内存马)、票据注入、Rookit技术，Linux维持技术
+痕迹清理：日志清除、破坏日志记录功能等&lt;/p&gt;&lt;p&gt;训练技能：HTB、Vulnhub、红日靶场、零散流传等&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;免杀对抗&lt;a href=&quot;#免杀对抗&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;对象：源代码、ExE、DLL、ShellCode其他（文档，手机等）
+目标：火绒、360、Defender、卡巴斯基、迈克菲、EDR等
+对抗：静态特征、动态行为、云查条、启发式、主动防御、AI等&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;技术：开发魔改、加密混淆、反沙箱虚拟机、恶意加载等&lt;/li&gt;
+&lt;li&gt;魔改：CS/MsF/Mimikatz/哥斯拉/Fscan/Frp等&lt;/li&gt;
+&lt;li&gt;Shellcode：加密混淆、隐写不落地、内存封装、黑白配等&lt;/li&gt;
+&lt;li&gt;静态：加密手法，特征码，白加黑，抗沙箱抗调试，隐写分离等&lt;/li&gt;
+&lt;li&gt;行为：API操作，注入劫持，回调函数，绕过DEP，远程注入等&lt;/li&gt;
+&lt;/ol&gt;&lt;blockquote&gt;&lt;p&gt;比如这些行为：
+注册表操作，添加启动项，添加服务
+文件写入、读系统文件、删除文件，移动文件
+杀进程，创建进程注入、劫持等
+恶意加载：进程，DLL，APC，无API注入等，线程劫持，回调函数等&lt;/p&gt;&lt;/blockquote&gt;&lt;ol&gt;
+&lt;li&gt;Bypass专题：UAC，EDR流量&amp;amp;扫描，Hook，ASMI，ETW（断点Patch）&lt;/li&gt;
+&lt;li&gt;实战对抗：目标类型，查杀原理，绕过对象，后续维权等&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;学习建议：
+安装IDE，虚拟机，杀毒产品，各类C2及对象应用，模拟网络环境等
+0、各类IDE语言入门杀毒前世今生PE输入输出IAT表Win32API函数学习汇编基础（逆向hook类）远控C2原理架构
+1、C/C++学到继承就可以了，数据结构和指针是重点，最低的要求能看得懂代码就行（b站、51hook或者榴莲的极安御信，对入门很有帮助
+2、熟悉windows编程以及核心编程，了解windows机制、apc、cfg、etw、进程、内存、dll等； 3、学习一些主流技术，如动态调用、aes、rc4加密、syscall、unhook、代码混淆、堆栈欺骗（过国内的可能不需要）
+4、了解杀软的查杀点，分析自已的木马和别人写的样例，学会ida、windbg、x64dbg、cff等工具的使用，学习汇编、看懂汇编
+5、杀软的静态比较容易bypass（赛门除外），edr的一些特点在于对危险行为的记录累计，或许你一开始上线是
+6、多看github上优秀项目的coding和一些前沿技术的文章（亲测有效）&lt;/p&gt;&lt;p&gt;拓展：开发自已的远控C2产品I熟悉C2架构及掌握升发能力）
+思维导图：&lt;a href=&quot;https://github.com/matro7sh/BypassAV&quot; target=&quot;_blank&quot;&gt;https://github.com/matro7sh/BypassAV&lt;/a&gt;
+学习资源：&lt;a href=&quot;https://github.com/search?g=%E5%85%8D%E6%9D%80&quot; target=&quot;_blank&quot;&gt;https://github.com/search?g=%E5%85%8D%E6%9D%80&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;移动安全&lt;a href=&quot;#移动安全&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;安卓、苹果、鸿蒙小程序等&lt;/p&gt;&lt;p&gt;1、抓包
+抓包工具：Burpsuite、Charles、Fiddler、科来、Wireshark
+代理检测：利用抓包应用、利用数据转发、利用控制网卡
+证书校验：XP、LSP、面具框架插件，hook断掉，提取证书安装
+通用绕过：反编译逆向，修改去除验证代码逻辑重打包&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;补充：数据加密—还原（一般需要反编译看代码）&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;2、逆向
+脱壳
+去保护
+反编译&lt;/p&gt;&lt;p&gt;3、小程序抓包同上
+反编译项目： wxpUnpacker
+&lt;a href=&quot;https://github.com/cqg21/wxappUnpacker&quot; target=&quot;_blank&quot;&gt;https://github.com/cqg21/wxappUnpacker&lt;/a&gt;&lt;/p&gt;&lt;p&gt;分包-unveilr
+&lt;a href=&quot;https://github.com/0day404/unveilr&quot; target=&quot;_blank&quot;&gt;https://github.com/0day404/unveilr&lt;/a&gt;&lt;/p&gt;&lt;p&gt;小程序开发者工具
+&lt;a href=&quot;https://g.gg.com/wiki/tools/devtool/&quot; target=&quot;_blank&quot;&gt;https://g.gg.com/wiki/tools/devtool/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;抓包-找URL JS接口测
+源码-找URL JS接口测
+源码-找代码中泄漏（AK/SK等）&lt;/p&gt;&lt;p&gt;4、客户端测试
+隐私合规四大组件键盘安全指纹密码手势密码学习资源：&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;车联网安全&lt;a href=&quot;#车联网安全&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;工具系统：&lt;a href=&quot;https://github.com/TianWen-Lab/TranSec/&quot; target=&quot;_blank&quot;&gt;https://github.com/TianWen-Lab/TranSec/&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;蓝队（应急响应、取证）&lt;a href=&quot;#蓝队应急响应取证&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;基线加固
+win/linux，数据库，中间件，办公安全等&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;linux GScan&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;设备使用
+蜜罐，IDS，WAF，NTA，EDR，厂商设备，天眼，ELK日志等
+IDS：
+入侵检测系统
+WAF类
+手工试探类
+扫描器探测类
+公网傀儡机扫描类
+Wehshell上传写入类
+命令执行远程下载攻击组件、反弹shell类
+NTA类设备（Network Traffic Analysis，网络流量分析）
+Web类警告
+异常流量类警告回连
+加密流量隧道
+EDR类（Endpoint Detection and Response，端点 / 终端检测与响应）
+回连类IP、告警
+命令执行下载攻击组件类告警&lt;/p&gt;&lt;p&gt;流量分析
+Wireshark，流量监控
+1、常见漏洞流量特征：
+RCE，SOL注入，反序列化，文件上传包含等
+2、应用安全组件流量特征：
+Thinkphp Laravel Yii等
+shiro，log4j，fastjson，st2，weblogic等
+3、安全渗透工具流量特征：
+C2类（CS/MSF/Viper等）
+扫描类（Awvs，NmapXray，Goby等）
+Webshell类（哥斯拉，冰蝎，蚁剑等）
+内网渗透类（fscan，ladon，frp，nps等）
+4、利用特征开发编写整理到设备中
+Yara、Yaml、Snort规则编写&lt;/p&gt;&lt;p&gt;应急技术
+攻击事件：
+钓鱼后门、文件、邮件等
+网站入侵，后门植入，流量异常，
+挖矿脚本，勒索病毒，拒绝服务等
+日志分析技术：
+类型：中间件，数据库，系统，其他应用日志存储和提取
+分析1：基于时间，后门，漏洞特征，文件篡改等基础展开
+分析2：ELK和入侵检测系统日志分析工具配合效率分析
+文件分析技术：
+捆绑应用，文档格式，释放文件等
+docx，pdf，lnk，exe，chm等
+邮件分析技术：
+发件IP，服务器，域名信息
+发件帐号，附件，其他特征等
+网络行为排查：
+端口外联，数据传输，流量告警等进程，启动项，计划任务，服务等
+windows/Linux后门清理：
+免条后门，Rookit后门，应用后门等
+内存马查条杀技术：
+.NETJaVaPHP脚本类
+（前面的Java安全资源）
+思考原因：
+网站被入侵导致，被钧鱼攻击导致，应用后门导致
+弱口令攻击导致，内网横向攻击导致，其他原因导致
+后续：弄懂入口点，修复安全漏洞，清理后门等&lt;/p&gt;&lt;p&gt;定位画像：
+IP定位：反查域名，域名备案，IP归属及位置，是否代理等
+攻击路径：漏洞点入口，文件类，后门类，漏洞类等
+文件分析：逆向，网络行为，计算哈希，特殊密码ID
+威胁情报：查文件查IP查任何信息 看看情报
+密罐溯源：见参考 配合蜜罐钓鱼 得到虚拟身份
+社工技术：裤子查ID，电话，昵称，姓名等扩大（各大引擎搜）
+攻击反制：见后续&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;姓名/ID：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;2&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;攻击IP：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;3&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;地理位置：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;4&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;QQ：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;5&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;微信：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;邮箱：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;7&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;手机号：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;8&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;支付宝：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;9&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;IP地址所属公司：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;10&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;IP地址关联域名：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;11&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;其他社交账号信息（如微博/src/id证明）：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;12&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;人物照片：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;13&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;跳板机（可选）：&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;（pS：以上为最理想结果情况，溯源到名字公司加分最高&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;学习资料：
+1、深信服在线课堂
+&lt;a href=&quot;https://learning.sangfor.com.cn/&quot; target=&quot;_blank&quot;&gt;https://learning.sangfor.com.cn/&lt;/a&gt;
+2、知识点资源文章笔记
+&lt;a href=&quot;https://bypassoo7.github.io/Emergency-Response-Notes/&quot; target=&quot;_blank&quot;&gt;https://bypassoo7.github.io/Emergency-Response-Notes/&lt;/a&gt;
+3、杂项资源文章笔记项具
+&lt;a href=&quot;https://github.com/tide-emergency/yingji&quot; target=&quot;_blank&quot;&gt;https://github.com/tide-emergency/yingji&lt;/a&gt;
+4、威胁情报&amp;amp;取证等
+&lt;a href=&quot;https://github.com/A-poc/BlueTeam-Tools&quot; target=&quot;_blank&quot;&gt;https://github.com/A-poc/BlueTeam-Tools&lt;/a&gt;&lt;/p&gt;&lt;p&gt;总结学习路线：
+1、先学习大概的红队技术（明白攻击流程和架构）
+2、常见安全设备平合部著及使用（明百设备能干麻）
+3、掌握windows/linux及其他系统安全加固基线检测
+4、掌握中间件数据库弱口令等及其他安全加固基线检测
+5、日志追查技术，后门查杀技术，文性分析技术及各类技
+6、流量分析各类红队工具，植入后门，攻击漏洞特征，开发yaml&amp;amp;yara规则
+7、掌握威胁情报平台，文件分析平台，社工，各类工具项自使用
+8、提高自已的表达和书写能力，大量的看文章复现模拟，多参与比赛项自等&lt;/p&gt;&lt;/section&gt;
+&lt;section&gt;&lt;h1&gt;二进制安全&lt;a href=&quot;#二进制安全&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;基础知识
+目前大部分二进制安全还是基于windows平台的。用户量大，资料多，软件多，入门选手必备
+C语言程序设计
+Windows程序设计
+汇编语言程序设计&lt;/p&gt;&lt;p&gt;技巧知识
+软件调试技巧：
+如OllyDBG，WinDbg，熟练他们使用，了解调试器的基本原理。如果精力够，强烈建议看一下调试器的源码另外多多学习调试技巧，这个是需要日积月累的，不能急，一开始自然很慢，慢慢就好了。其实动态调试器都懂了，那么静态反汇编工具，基本也就OK了。
+WINDOWS PE结构：
+PE还是很重要的，无其是再研究一些加壳脱壳，恶意样本分析的时候，必不可少。常用工具：
+常用工具的了解和使用。比如wireshark，Winhex，VMWARE，PEID等等。&lt;/p&gt;&lt;p&gt;选择方向：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;windows平台&lt;/li&gt;
+&lt;li&gt;Linux平台&lt;/li&gt;
+&lt;li&gt;mac平台&lt;/li&gt;
+&lt;li&gt;android和ios平台以后的鸿蒙等&lt;/li&gt;
+&lt;li&gt;浏览器&lt;/li&gt;
+&lt;li&gt;模糊测试（Fuzzing）技术
+（注意：这种技术可以在上面所有平台使用，不过不同的平台使用的工具方法有差异）&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;相关的资源：
+&lt;a href=&quot;https://github.com/BinSecurity/BinSecurity&quot; target=&quot;_blank&quot;&gt;https://github.com/BinSecurity/BinSecurity&lt;/a&gt;
+&lt;a href=&quot;https://github.com/ErodedElk/BinaryAbyss&quot; target=&quot;_blank&quot;&gt;https://github.com/ErodedElk/BinaryAbyss&lt;/a&gt;&lt;/p&gt;&lt;p&gt;学习笔记
+&lt;a href=&quot;https://github.com/surrealsky/web_security&quot; target=&quot;_blank&quot;&gt;https://github.com/surrealsky/web_security&lt;/a&gt;
+&lt;a href=&quot;https://github.com/gh0stkey/Binary-Learning&quot; target=&quot;_blank&quot;&gt;https://github.com/gh0stkey/Binary-Learning&lt;/a&gt;
+&lt;a href=&quot;https://github.com/dontminddontmind/onenote_pwn&quot; target=&quot;_blank&quot;&gt;https://github.com/dontminddontmind/onenote_pwn&lt;/a&gt;
+&lt;a href=&quot;https://space.bilibili.com/447734880&quot; target=&quot;_blank&quot;&gt;https://space.bilibili.com/447734880&lt;/a&gt;
+&lt;a href=&quot;https://space.bilibili.com/267460290&quot; target=&quot;_blank&quot;&gt;https://space.bilibili.com/267460290&lt;/a&gt;
+&lt;a href=&quot;https://space.bilibili.com/1782544616&quot; target=&quot;_blank&quot;&gt;https://space.bilibili.com/1782544616&lt;/a&gt;&lt;/p&gt;&lt;/section&gt;</content:encoded></item><item><title>CVE-2023-20198</title><link>https://l0udl0ve.github.io/posts/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/cve-2023-20198/cve-2023-20198/</link><guid isPermaLink="true">https://l0udl0ve.github.io/posts/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/cve-2023-20198/cve-2023-20198/</guid><description>固件分析经验贴。</description><pubDate>Mon, 23 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;漏洞描述&lt;a href=&quot;#漏洞描述&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;未经身份验证的远程攻击者可以利用该漏洞创建具有最高访问权限的账户，进而控制受影响的系统。启用了Web UI功能的Cisco IOS XE设备均受该漏洞影响。&lt;/p&gt;&lt;/section&gt;
 &lt;section&gt;&lt;h1&gt;漏洞分析&lt;a href=&quot;#漏洞分析&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;首先，通过审计&lt;code&gt;/var/LibLua/WSMAApiLib.lua&lt;/code&gt;可以发现，要执行CLI代码，最终都是通过访问&lt;code&gt;/lua&lt;/code&gt;路径来实现的。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;WSMAApiLib-WSMAApplyInteractiveCmd.png&quot; loading=&quot;lazy&quot; width=&quot;1206&quot; height=&quot;895&quot; src=&quot;/_astro/WSMAApiLib-WSMAApplyInteractiveCmd.CMSTjukg_Z148JsB.webp&quot; srcset=&quot;/_astro/WSMAApiLib-WSMAApplyInteractiveCmd.CMSTjukg_Z1QNuR3.webp 640w, /_astro/WSMAApiLib-WSMAApplyInteractiveCmd.CMSTjukg_2mrxj.webp 750w, /_astro/WSMAApiLib-WSMAApplyInteractiveCmd.CMSTjukg_6Tcz1.webp 828w, /_astro/WSMAApiLib-WSMAApplyInteractiveCmd.CMSTjukg_1XMgsi.webp 1080w, /_astro/WSMAApiLib-WSMAApplyInteractiveCmd.CMSTjukg_Z148JsB.webp 1206w&quot; /&gt;&lt;figcaption&gt;WSMAApiLib-WSMAApplyInteractiveCmd.png&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;figure&gt;&lt;img alt=&quot;WSMAApiLib-WSMASendCommand.png&quot; loading=&quot;lazy&quot; width=&quot;1228&quot; height=&quot;483&quot; src=&quot;/_astro/WSMAApiLib-WSMASendCommand.Dqi_HfiZ_fdBAP.webp&quot; srcset=&quot;/_astro/WSMAApiLib-WSMASendCommand.Dqi_HfiZ_ZrWKIm.webp 640w, /_astro/WSMAApiLib-WSMASendCommand.Dqi_HfiZ_Z1Nd4RE.webp 750w, /_astro/WSMAApiLib-WSMASendCommand.Dqi_HfiZ_2aJcV1.webp 828w, /_astro/WSMAApiLib-WSMASendCommand.Dqi_HfiZ_ZtVCnp.webp 1080w, /_astro/WSMAApiLib-WSMASendCommand.Dqi_HfiZ_fdBAP.webp 1228w&quot; /&gt;&lt;figcaption&gt;WSMAApiLib-WSMASendCommand.png&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;继续审计nginx的配置，该路径配置了&lt;code&gt;internal&lt;/code&gt;字段，所以只能通过nginx内部代码来访问该路径。接着看代码，可以发现，&lt;code&gt;/lua&lt;/code&gt;路径最终会根据&lt;code&gt;http&lt;/code&gt;或者&lt;code&gt;https&lt;/code&gt;来选择访问&lt;code&gt;/webui_wsma_http(s)&lt;/code&gt; 路径，同样，该路径也是没办法通过外部访问，这部分nginx配置理论上无法绕过。
 &lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;webuiconf.png&quot; loading=&quot;lazy&quot; width=&quot;1044&quot; height=&quot;1222&quot; src=&quot;/_astro/webuiconf.DBW3E0is_Z1z8oX3.webp&quot; srcset=&quot;/_astro/webuiconf.DBW3E0is_NjItx.webp 640w, /_astro/webuiconf.DBW3E0is_Z1L5lze.webp 750w, /_astro/webuiconf.DBW3E0is_1JKliH.webp 828w, /_astro/webuiconf.DBW3E0is_Z1z8oX3.webp 1044w&quot; /&gt;&lt;figcaption&gt;webuiconf.png&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;不过，&lt;code&gt;/webui_wsma_http(s)&lt;/code&gt;路径也不是最终执行CLI命令的地方，最终是通过访问&lt;code&gt;http(s)://192.168.1.6&lt;/code&gt;来与&lt;code&gt;iosd&lt;/code&gt;程序进行通信，下面进行一个测试。&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;ip&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;netns&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;exec&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;8&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;curl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-kv&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;http://192.168.1.6/webui_wsma_http&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;&amp;lt;xml&amp;gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;test1.png&quot; loading=&quot;lazy&quot; width=&quot;1854&quot; height=&quot;1516&quot; src=&quot;/_astro/test1.Bh0ZgVOj_Z10pLq7.webp&quot; srcset=&quot;/_astro/test1.Bh0ZgVOj_1gtqa9.webp 640w, /_astro/test1.Bh0ZgVOj_1y4qbR.webp 750w, /_astro/test1.Bh0ZgVOj_1cwuIc.webp 828w, /_astro/test1.Bh0ZgVOj_Z1U2OUm.webp 1080w, /_astro/test1.Bh0ZgVOj_ZDAbHN.webp 1280w, /_astro/test1.Bh0ZgVOj_ZlC92A.webp 1668w, /_astro/test1.Bh0ZgVOj_Z10pLq7.webp 1854w&quot; /&gt;&lt;figcaption&gt;test1.png&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;figure&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Terminal window&lt;/span&gt;&lt;/figcaption&gt;&lt;pre&gt;&lt;code&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;1&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;ip&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;netns&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;exec&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;8&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;curl&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-kv&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;http://192.168.1.6/webui_wsma%5fhttp&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;-d&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&quot;&amp;lt;xml&amp;gt;&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;test2.png&quot; loading=&quot;lazy&quot; width=&quot;1897&quot; height=&quot;1593&quot; src=&quot;/_astro/test2.dORLSepl_Pa34W.webp&quot; srcset=&quot;/_astro/test2.dORLSepl_ZMh4QD.webp 640w, /_astro/test2.dORLSepl_Z1iXq8m.webp 750w, /_astro/test2.dORLSepl_PwrEx.webp 828w, /_astro/test2.dORLSepl_tjnk3.webp 1080w, /_astro/test2.dORLSepl_ZWlJPM.webp 1280w, /_astro/test2.dORLSepl_Z1WpsMG.webp 1668w, /_astro/test2.dORLSepl_Pa34W.webp 1897w&quot; /&gt;&lt;figcaption&gt;test2.png&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;注：&lt;/p&gt;&lt;p&gt;这里绕过nginx，从内部访问后端的IP地址，借助了CVE-2023-20273进行了命令执行&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;从上面可以发现，&lt;code&gt;iosd&lt;/code&gt;能够进行URL decode。&lt;/p&gt;&lt;p&gt;想要执行CLI命令，需要直接访问&lt;code&gt;http://host/webui_wsma_http&lt;/code&gt;来请求到&lt;code&gt;192.168.1.6&lt;/code&gt;后端，由于设置了&lt;code&gt;internal&lt;/code&gt;关键字，所以直接外部访问会返回404。&lt;/p&gt;&lt;p&gt;然而nginx默认情况下，会把请求发送给&lt;code&gt;iosd&lt;/code&gt;后端且nginx服务是会对URL编码进行解码的。这样可以使用二次URL编码绕过这个nginx的内部网络限制，从而在外部进行命令执行。&lt;/p&gt;&lt;/section&gt;
@@ -25,8 +208,4 @@
 &lt;figure&gt;&lt;img alt=&quot;softwareUpgrade-GET.png&quot; loading=&quot;lazy&quot; width=&quot;1354&quot; height=&quot;981&quot; src=&quot;/_astro/softwareUpgrade-GET.BAhltXmV_Z12qv2F.webp&quot; srcset=&quot;/_astro/softwareUpgrade-GET.BAhltXmV_1SwTek.webp 640w, /_astro/softwareUpgrade-GET.BAhltXmV_1yBRxs.webp 750w, /_astro/softwareUpgrade-GET.BAhltXmV_nEGHA.webp 828w, /_astro/softwareUpgrade-GET.BAhltXmV_SDA2l.webp 1080w, /_astro/softwareUpgrade-GET.BAhltXmV_ZMaW65.webp 1280w, /_astro/softwareUpgrade-GET.BAhltXmV_Z12qv2F.webp 1354w&quot; /&gt;&lt;figcaption&gt;softwareUpgrade-GET.png&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;/section&gt;&lt;/section&gt;&lt;/section&gt;
 &lt;section&gt;&lt;h1&gt;漏洞利用&lt;a href=&quot;#漏洞利用&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;执行脚本，漏洞利用成功
 &lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;exp.jpg&quot; loading=&quot;lazy&quot; width=&quot;1695&quot; height=&quot;1188&quot; src=&quot;/_astro/exp.CkGyH3Of_1dS37s.webp&quot; srcset=&quot;/_astro/exp.CkGyH3Of_uyAyE.webp 640w, /_astro/exp.CkGyH3Of_IM0Qe.webp 750w, /_astro/exp.CkGyH3Of_2KOvp.webp 828w, /_astro/exp.CkGyH3Of_Z1R4vKk.webp 1080w, /_astro/exp.CkGyH3Of_1Alm7d.webp 1280w, /_astro/exp.CkGyH3Of_Z1laHJt.webp 1668w, /_astro/exp.CkGyH3Of_1dS37s.webp 1695w&quot; /&gt;&lt;figcaption&gt;exp.jpg&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;a href=&quot;https://github.com/smokeintheshell/CVE-2023-20273&quot; target=&quot;_blank&quot;&gt;github上的利用脚本&lt;/a&gt;仅利用了softwareMgmt.lua文件中的漏洞&lt;p&gt;&lt;/p&gt;&lt;/section&gt;</content:encoded></item><item><title>Docker</title><link>https://l0udl0ve.github.io/posts/docker/docker/</link><guid isPermaLink="true">https://l0udl0ve.github.io/posts/docker/docker/</guid><description>docker学习笔记</description><pubDate>Thu, 05 Dec 2024 00:00:00 GMT</pubDate><content:encoded>&lt;section&gt;&lt;h1&gt;简介&lt;a href=&quot;#简介&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Docker是一个基于Go语言的开源的应用容器引擎，允许让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口，更重要的是容器性能开销极低。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;个人理解：docker的出现解决了大量的环境配置问题。&lt;/p&gt;&lt;/blockquote&gt;&lt;/section&gt;
-&lt;section&gt;&lt;h1&gt;代理配置&lt;a href=&quot;#代理配置&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;这个很重要，因为DockerHub总是不能正常访问，可以走一些大厂的渠道拉取镜像。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;科大镜像：&lt;strong&gt;&lt;a href=&quot;https://docker.mirrors.ustc.edu.cn/&quot; target=&quot;_blank&quot;&gt;https://docker.mirrors.ustc.edu.cn/&lt;/a&gt;&lt;/strong&gt;
-网易：&lt;strong&gt;&lt;a href=&quot;https://hub-mirror.c.163.com/&quot; target=&quot;_blank&quot;&gt;https://hub-mirror.c.163.com/&lt;/a&gt;&lt;/strong&gt;
-阿里云：&lt;strong&gt;https://&amp;lt;你的ID&amp;gt;.mirror.aliyuncs.com&lt;/strong&gt;
-七牛云加速器：&lt;strong&gt;&lt;a href=&quot;https://reg-mirror.qiniu.com&quot; target=&quot;_blank&quot;&gt;https://reg-mirror.qiniu.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;section&gt;&lt;h2&gt;容器使用&lt;a href=&quot;#容器使用&quot;&gt;&lt;span&gt;#&lt;/span&gt;&lt;/a&gt;&lt;/h2&gt;&lt;/section&gt;&lt;/section&gt;</content:encoded></item></channel></rss>
+&lt;a href=&quot;https://github.com/smokeintheshell/CVE-2023-20273&quot; target=&quot;_blank&quot;&gt;github上的利用脚本&lt;/a&gt;仅利用了softwareMgmt.lua文件中的漏洞&lt;p&gt;&lt;/p&gt;&lt;/section&gt;</content:encoded></item></channel></rss>
