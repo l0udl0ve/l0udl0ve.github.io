@@ -4,7 +4,9 @@ published: 2024-12-05
 description: docker学习笔记
 tags:
   - Docker
-category: docker
+category:
+  - Docker
+  - misc
 draft: false
 ---
 
